@@ -44,4 +44,4 @@ The repository has been created as a public repository. At present, it contains 
 
 ## File encoding
 
-Most uploaded modules are UTF-8. `Gealender_SFRJ_mns_ST2.mod` is ISO-8859-1 text.
+Most uploaded modules are UTF-8. `Gealender_SFRJ_mns_ST2.mod` uses a legacy non-UTF-8 text encoding; its original bytes are preserved in the supplied archives.
