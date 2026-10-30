@@ -2,11 +2,9 @@
 
 Personal collection of ABB IRC5 RAPID modules for welding automation.
 
-## Repository status
+## Repository contents
 
-The repository has been created as a public repository. At present, it contains this index file only; the RAPID source modules listed below have not yet been committed.
-
-## Planned source modules
+The repository contains 18 RAPID source modules:
 
 ### General and utility modules
 - `AAA_General.mod`
@@ -44,4 +42,5 @@ The repository has been created as a public repository. At present, it contains 
 
 ## File encoding
 
-Most uploaded modules are UTF-8. `Gealender_SFRJ_mns_ST2.mod` uses a legacy non-UTF-8 text encoding; its original bytes are preserved in the supplied archives.
+- Most modules are stored as UTF-8 text.
+- `Gealender_SFRJ_mns_ST2.mod` was converted from its legacy Windows-1252 encoding to UTF-8 for GitHub display and compatibility. The original bytes are preserved in the supplied ZIP and TAR.XZ archives.
