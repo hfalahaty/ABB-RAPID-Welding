@@ -144,7 +144,7 @@ MODULE A_15542_1_Railing_St2_LS
     !************************************Main Robot targets used every where***************************************    
     !**************************************************************************************************************   
     
-    LOCAL PERS wobjdata wobjSt2:=[FALSE,FALSE,"STN1",[[0,0,0],[1,0,0,0]],[[61,-466,807],[1,0,0,0]]];
+    LOCAL PERS wobjdata wobjSt2:=[FALSE,FALSE,"Stn2",[[0,0,0],[1,0,0,0]],[[61,-466,807],[1,0,0,0]]];
     
     !**************************************************************************************************************    
     !*************************************************Local Variables********************************************** 
@@ -415,7 +415,7 @@ MODULE A_15542_1_Railing_St2_LS
         
         PosSearchTop;
         
-        SetDO doExhaustStn1,1;
+        SetDO doExhaustStn2,1;
    
         !Top first Post weld
         weldCorner 1, Odp{1},CorrPT{1},2;
@@ -440,11 +440,11 @@ MODULE A_15542_1_Railing_St2_LS
         !Move to other side
         MoveJ safeSt2_0, v1000, z50, tWeldGun;            
         
-        SetDO doExhaustStn1,0;
+        SetDO doExhaustStn2,0;
 
         PosSearchBottom;
         
-        SetDO doExhaustStn1,1;
+        SetDO doExhaustStn2,1;
         
         !Bottom first Post weld
         weldCorner 4,Odp{1},CorrPB{1},3;
@@ -463,7 +463,7 @@ MODULE A_15542_1_Railing_St2_LS
             Weld_ARC_S WobjN,OdB{i},CorrBB{i},0;
         ENDFOR
 
-        SetDO doExhaustStn1,0;
+        SetDO doExhaustStn2,0;
     
         Cleaning;
         StartStn2;
@@ -478,7 +478,7 @@ MODULE A_15542_1_Railing_St2_LS
         
         PosSearchTop;
         
-        SetDO doExhaustStn1,1;
+        SetDO doExhaustStn2,1;
     
         !Bottom first Post weld
         WobjN:= WobjNew(Odp{1},1);
@@ -501,11 +501,11 @@ MODULE A_15542_1_Railing_St2_LS
             Weld_ARC_N WobjN,OdB{i},CorrBT{i},0;
         ENDFOR                
 
-        SetDO doExhaustStn1,0;
+        SetDO doExhaustStn2,0;
         
         PosSearchBottom;
 
-        SetDO doExhaustStn1,1;
+        SetDO doExhaustStn2,1;
             
         !Top first Post weld
         WobjN:= WobjNew(Odp{1},3);
@@ -533,7 +533,7 @@ MODULE A_15542_1_Railing_St2_LS
         MoveJ safeSt2_0, v1000, z50, tWeldGun;    
     
         
-        SetDO doExhaustStn1,0;
+        SetDO doExhaustStn2,0;
     
         Cleaning;
         StartStn2;
@@ -643,7 +643,7 @@ MODULE A_15542_1_Railing_St2_LS
             Weld_3F_NW_L WobjN,OdP,CorrP,PosAn;
 
         ENDIF
-        !!
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     ENDPROC
     
     !This procedure move robot to safeSt2 and let operator to clean
@@ -1143,17 +1143,11 @@ MODULE A_15542_1_Railing_St2_LS
         !RT1:= [[-0.38,-2.70,-10.06],[0.931078,0.194929,-0.172878,0.255362],[1,-2,0,0],[783.052,9E+09,9E+09,9E+09,29.9985,9E+09]] ;
 
         IF wobjUse.oframe.trans.y<0 THEN
-            
-            RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
-            
             RT1.trans:=[0,2,0];
             RT1.rot:=[0.93,0.19,-0.19,0.25];
             RT1.robconf:=[1,-1,-1,0];
             RT1.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
         ELSE
-            
-            RT0.extax:=[wobjUse.oframe.trans.z+500,9E+09,9E+09,9E+09,0,9E+09];
-            
             RT1.trans:=[0,-2,0];
             RT1.rot:=[0.93,-0.19,-0.25,0.19];
             RT1.robconf:=[1,-1,-1,0];
@@ -1164,12 +1158,10 @@ MODULE A_15542_1_Railing_St2_LS
         MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         PulseDO\High\PLength:=0.5,soFeedFwd_1;
 
-        !Move to a suitable point to start Y and Z correction
-        Movej Offs(RT0,100,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse; 
-        
         s:=1;
         WHILE s=1 DO
             s:=5;
+            Movej Offs(RT0,100,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSz ,Offs(RT0,-5,-30,-30) , Offs(RT0,-5,-30,0), v200, tWeldGun\WObj:=wobjUse;
             IF Abs(RTSz.trans.z)>12 THEN
                 TPErase;
@@ -1218,35 +1210,28 @@ MODULE A_15542_1_Railing_St2_LS
         WobjUse:=CorrectWobj;
         wobjUse.oframe.trans:= wobjUse.oframe.trans+correction;
         
-        
         !RT2:= [[0,0,0],[0.449513,-0.755714,-0.467429,0.0913496],[0,-2,1,1],[1864.98,9E+09,9E+09,9E+09,29.9993,9E+09]] ;
+
         RT2.trans:=[0,-1,1];
         RT2.rot:=[0.45,-0.76,-0.47,0.09];
         RT2.robconf:=[0,-2,1,1];
+
         IF wobjUse.oframe.trans.y<0 THEN
-            
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
-            
             RT2.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
-            
         ELSE
-            
             RT0.extax:=[wobjUse.oframe.trans.z+750,9E+09,9E+09,9E+09,0,9E+09];
-            
             RT2.extax:=[wobjUse.oframe.trans.z+750,9E+09,9E+09,9E+09,-PosAn,9E+09];
-            
         ENDIF
 
         !Set new robotTarget over new workObject and move torch 400 mm above it
         MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         PulseDO\High\PLength:=1,soFeedFwd_1;
 
-        !Move to a suitable point to start Y and Z correction
-        Movej Offs(RT0,100,-30,30),v1000,z50,tWeldGun\WObj:=wobjUse; 
-        
         s:=1;
         WHILE s=1 DO
             s:=5;
+            Movej Offs(RT0,100,-30,30),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSy ,Offs(RT0,-5,-30,30) , Offs(RT0,-5,0,30), v200, tWeldGun\WObj:=wobjUse;
             IF Abs(RTSy.trans.y)>2 THEN
                 TPErase;
@@ -1315,6 +1300,7 @@ MODULE A_15542_1_Railing_St2_LS
         RT2.trans:=[0,0,0];
         RT2.rot:=[0.45,-0.76,-0.47,0.09];
         RT2.robconf:=[0,-2,1,1];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT2.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
         ELSE
@@ -1351,30 +1337,23 @@ MODULE A_15542_1_Railing_St2_LS
         RT3.trans:=[0,-1,-1];
         RT3.rot:=[0.76,-0.45,-0.09,0.47];
         RT3.robconf:=[1,-1,-1,0];
-        IF wobjUse.oframe.trans.y<0 THEN
 
+        IF wobjUse.oframe.trans.y<0 THEN
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
-            
             RT3.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
-            
         ELSE
-            
             RT0.extax:=[wobjUse.oframe.trans.z+500,9E+09,9E+09,9E+09,0,9E+09];
-            
             RT3.extax:=[wobjUse.oframe.trans.z+500,9E+09,9E+09,9E+09,-PosAn,9E+09];
-            
         ENDIF
 
         !Set new robotTarget over new workObject and move torch 400 mm above it
         MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         PulseDO\High\PLength:=1,soFeedFwd_1;
 
-        !Move to a suitable point to start Y and Z correction
-        Movej Offs(RT0,100,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
-
         s:=1;
         WHILE s=1 DO
             s:=5;
+            Movej Offs(RT0,100,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
             Search_1D RTSy ,Offs(RT0,-5,-30,-30) , Offs(RT0,-5,0,-30), v200, tWeldGun\WObj:=wobjUse;
             IF Abs(RTSy.trans.y)>2 THEN
                 TPErase;
@@ -1390,6 +1369,7 @@ MODULE A_15542_1_Railing_St2_LS
         s:=1;
         WHILE s=1 DO
             s:=5;
+            Movej Offs(RT0,50,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
             Search_1D RTSz ,Offs(RT0,-5,-30,-30) , Offs(RT0,-5,-30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
             IF Abs(RTSz.trans.z)>2 THEN
                 TPErase;
@@ -1443,6 +1423,7 @@ MODULE A_15542_1_Railing_St2_LS
         RT3.trans:=[0,0,0];
         RT3.rot:=[0.76,-0.45,-0.09,0.47];
         RT3.robconf:=[1,-1,-1,0];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT3.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
         ELSE
@@ -1479,9 +1460,10 @@ MODULE A_15542_1_Railing_St2_LS
 
 
         !RT4:= [[-0.01,0.03,-0.04],[0.297766,-0.602984,-0.728606,0.129922],[1,-1,0,1],[5394.97,9E+09,9E+09,9E+09,0.00222879,9E+09]] ;
+
         RT4.rot:=[0.30,-0.60,-0.73,0.13];
         RT4.robconf:=[0,-2,1,1];
-        !RT4.robconf:=[0,1,-2,0];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
             RT4.trans:=[0,2,0];
@@ -1495,13 +1477,11 @@ MODULE A_15542_1_Railing_St2_LS
         !Set new robotTarget over new workObject and move torch 400 mm above it
         MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         PulseDO\High\PLength:=0.5,soFeedFwd_1;
-
-        !Move to a suitable point to start Y and Z correction
-        Movej Offs(RT0,100,-30,30),v1000,z50,tWeldGun\WObj:=wobjUse; 
         
         s:=1;
         WHILE s=1 DO
             s:=5;
+            Movej Offs(RT0,100,-30,30),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSz ,Offs(RT0,-5,-30,30) , Offs(RT0,-5,-30,0), v200, tWeldGun\WObj:=wobjUse;
             IF Abs(RTSz.trans.z)>12 THEN
                 TPErase;
@@ -1551,13 +1531,12 @@ MODULE A_15542_1_Railing_St2_LS
         WobjUse:=CorrectWobj;
         wobjUse.oframe.trans:= wobjUse.oframe.trans+correction;
 
-        !PDispSet [correction,[1,0,0,0]];
-        
-
         !RT5:= [[-2.83,3.59,0.11],[0.330995,0.88275,0.0400167,-0.331049],[0,-1,1,0],[1865.01,9E+09,9E+09,9E+09,0.000329907,9E+09]] ;
+
         RT5.trans:=[0,1,1];
         RT5.rot:=[0.45,0.76,-0.47,-0.09];
         RT5.robconf:=[1,-1,1,0];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
             RT5.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
@@ -1569,13 +1548,12 @@ MODULE A_15542_1_Railing_St2_LS
         !Set new robotTarget over new workObject and move torch 400 mm above it
         MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         PulseDO\High\PLength:=1.5,soFeedFwd_1;
-        
-        Movej Offs(RT0,100,30,30),v1000,z50,tWeldGun\WObj:=wobjUse;
 
         s:=1;
         WHILE s=1 DO
             s:=5;
-        Search_1D RTSy ,Offs(RT0,-5,30,30) , Offs(RT0,-5,0,30), v200, tWeldGun\WObj:=wobjUse;
+            Movej Offs(RT0,100,30,30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Search_1D RTSy ,Offs(RT0,-5,30,30) , Offs(RT0,-5,0,30), v200, tWeldGun\WObj:=wobjUse;
             IF Abs(RTSy.trans.y)>2 THEN
                 TPErase;
                 TPReadFK s, "Check TCP",
@@ -1590,7 +1568,8 @@ MODULE A_15542_1_Railing_St2_LS
         s:=1;
         WHILE s=1 DO
             s:=5;
-        Search_1D RTSz ,Offs(RT0,-5,30,30) , Offs(RT0,-5,30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movej Offs(RT0,50,30,30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Search_1D RTSz ,Offs(RT0,-5,30,30) , Offs(RT0,-5,30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
             IF Abs(RTSz.trans.z)>2 THEN
                 TPErase;
                 TPReadFK s, "Check TCP",
@@ -1637,6 +1616,7 @@ MODULE A_15542_1_Railing_St2_LS
         RT5.trans:=[0,0,4];
         RT5.rot:=[0.45,0.76,-0.47,-0.09];
         RT5.robconf:=[1,-1,1,0];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT5.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
         ELSE
@@ -1671,9 +1651,11 @@ MODULE A_15542_1_Railing_St2_LS
         wobjUse.oframe.trans:= wobjUse.oframe.trans+correction;
         
         !RT6:= [[-2.60,13.00,-13.30],[0.86,0.27,-0.40,0.12],[0,0,-2,0],[1750.01,9E+09,9E+09,9E+09,29.9989,9E+09]] ;
+
         RT6.trans:=[0,1,-1];
         RT6.rot:=[0.76,0.45,-0.09,-0.47];
         RT6.robconf:=[0,0,-2,0];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
             RT6.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
@@ -1686,12 +1668,11 @@ MODULE A_15542_1_Railing_St2_LS
         MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         PulseDO\High\PLength:=1,soFeedFwd_1;
         
-        Movej Offs(RT0,100,30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
-
         s:=1;
         WHILE s=1 DO
             s:=5;
-        Search_1D RTSy ,Offs(RT0,-5,30,-30) , Offs(RT0,-5,0,-30), v200, tWeldGun\WObj:=wobjUse;
+            Movej Offs(RT0,100,30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Search_1D RTSy ,Offs(RT0,-5,30,-30) , Offs(RT0,-5,0,-30), v200, tWeldGun\WObj:=wobjUse;
             IF Abs(RTSy.trans.y)>2 THEN
                 TPErase;
                 TPReadFK s, "Check TCP",
@@ -1706,7 +1687,8 @@ MODULE A_15542_1_Railing_St2_LS
         s:=1;
         WHILE s=1 DO
             s:=5;
-        Search_1D RTSz ,Offs(RT0,-5,30,-30) , Offs(RT0,-5,30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movej Offs(RT0,50,30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Search_1D RTSz ,Offs(RT0,-5,30,-30) , Offs(RT0,-5,30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
             IF Abs(RTSz.trans.z)>2 THEN
                 TPErase;
                 TPReadFK s, "Check TCP",
@@ -1760,6 +1742,7 @@ MODULE A_15542_1_Railing_St2_LS
         RT6.trans:=[0,0,0];
         RT6.rot:=[0.76,0.45,-0.09,-0.47];
         RT6.robconf:=[0,0,-2,0];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT6.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
         ELSE
@@ -1798,10 +1781,11 @@ MODULE A_15542_1_Railing_St2_LS
         
         WobjUse:=CorrectWobj;
         wobjUse.oframe.trans:= wobjUse.oframe.trans+correction;
-        !PDispset [correction,[1,0,0,0]];
 
         !RB1:= [[9.98,-18.10,-0.35],[0.75894,-0.546435,-0.21249,0.283314],[1,1,-2,1],[484.003,9E+09,9E+09,9E+09,0.000251827,9E+09]] ;
+
         RB1.trans:=[1,0,-6];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
             RB1.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
@@ -1811,9 +1795,7 @@ MODULE A_15542_1_Railing_St2_LS
         ENDIF
 
         RB1.rot:=[0.75,-0.54,-0.21,0.28];
-        !RB1.rot:=[0.5,-0.5,-0.5,0.5];
         RB1.robconf:=[1,-1,-1,0];
-        !RB1.robconf:=[1,1,-2,1];
         
         p0:=Offs(RB1,0,0,0);
         p2:=offs(p0,-(1.9),0,-(3));
@@ -1868,7 +1850,9 @@ MODULE A_15542_1_Railing_St2_LS
         wobjUse.oframe.trans:= wobjUse.oframe.trans+correction;
         
         !RB2:= [[35.33,-6.62,0.51],[0.78,0.50,-0.19,-0.30],[0,-1,-2,0],[466.994,9E+09,9E+09,9E+09,0.000589406,9E+09]] ;
+
         RB2.trans:=[0,3,-7];
+
         IF wobjUse.oframe.trans.y<0 THEN
             RB2.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
         ELSE
