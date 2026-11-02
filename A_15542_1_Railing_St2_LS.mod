@@ -125,9 +125,9 @@ MODULE A_15542_1_Railing_St2_LS
     !**************************************************************************************************************    
 
     !Reference Robtarget shows Down, inside part of frame (Abreviated as RefT page 25 of <<Sotware analysis handbook>> )
-    LOCAL PERS robtarget RefT:= [[75,-465,810],[0.5,-0.5,-0.5,0.5],[1,-2,1,0],[370,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
+    LOCAL PERS robtarget RefT:= [[75,-465,810],[0.5,-0.5,-0.5,0.5],[1,-2,1,0],[370,9E+09,9E+09,9E+09,0,9E+09]];!wRot2
     
-    LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
+    LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot2
     
     LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[4621.85,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
     LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[1305.25,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
@@ -326,16 +326,16 @@ MODULE A_15542_1_Railing_St2_LS
         RefT.trans.y:=dy+fdySt2;
         RefT.trans.z:=dz+fdzSt2;
         
-        SetWobjUse wRot1,dx,dy,dz;
+        SetWobjUse wRot2,dx,dy,dz;
         wobjSt2:=wobjUse;
-        wobjSt2.oframe.trans:=wRot1.oframe.trans+[dx,dy,dz];
+        wobjSt2.oframe.trans:=wRot2.oframe.trans+[dx,dy,dz];
         
         StartStn2;
 
         MoveJ safeSt2_0, v1000, z50, tWeldGun\WObj:=wobj0;
-        MoveJ overSt2, v1000, z50, tWeldGun\WObj:=wRot1;
+        MoveJ overSt2, v1000, z50, tWeldGun\WObj:=wRot2;
         
-        RT0.extax.eax_a:=wRot1.oframe.trans.z+500;        
+        RT0.extax.eax_a:=wRot2.oframe.trans.z+500;        
         MoveJ Offs(RT0,10,0,0), v1000, fine, tWeldGun\WObj:=wobjSt2;
         WaitTime 5;
         
@@ -428,7 +428,7 @@ MODULE A_15542_1_Railing_St2_LS
         !Top last Post weld
         weldCorner 3, Odp{n1},CorrPT{n1},2;
         
-        MoveJ Offs(overSt2,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+        MoveJ Offs(overSt2,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot2;            
     
         !top side of Balusters welding
         FOR i FROM 1 TO n2 DO
@@ -521,7 +521,7 @@ MODULE A_15542_1_Railing_St2_LS
         WobjN:= WobjNew(Odp{n1},4);
         Weld_2G_H WobjN,OdP{n1},CorrPB{n1},"LB",t1;
 
-        MoveJ Offs(overSt2,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+        MoveJ Offs(overSt2,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot2;            
 
         !top side of Balusters welding
         FOR i FROM 1 TO n2 DO
@@ -701,12 +701,12 @@ MODULE A_15542_1_Railing_St2_LS
         MoveJ safeSt2, v1000, z50, tWeldGun;            
         GunClean;
         IF RobAtStation() = 1 THEN
-            StartStn2;
+            StartStn1;
         ELSE
             StartStn2;
         ENDIF
         
-        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;            
         
          s:=0;
         TPErase;
@@ -731,7 +731,7 @@ MODULE A_15542_1_Railing_St2_LS
             CorrBT{i}:=PosCorr(OdB{i},5,0);
         ENDFOR
         
-        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;            
         
     ENDPROC
     
@@ -741,12 +741,12 @@ MODULE A_15542_1_Railing_St2_LS
         MoveJ safeSt2, v1000, z50, tWeldGun;            
         GunClean;
         IF RobAtStation() = 1 THEN
-            StartStn2;
+            StartStn1;
         ELSE
             StartStn2;
         ENDIF
 
-        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;            
         
          s:=0;
         TPErase;
@@ -770,8 +770,8 @@ MODULE A_15542_1_Railing_St2_LS
             CorrBB{i}:=PosCorr(OdB{i},6,0);
         ENDFOR
         
-        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;
-        !MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;        
+        MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;
+        !MoveJ Offs(overSt2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;        
         
     ENDPROC
     
@@ -809,14 +809,7 @@ MODULE A_15542_1_Railing_St2_LS
 
         IF SP=1 THEN !For SP refer to page 24 of sotware analysis handbook
             
-            !RT0 := [[206.75,-30.25,152.95],[0.500043,-0.499989,-0.499952,0.500016],[1,-1,1,0],[2913.87,9E+09,9E+09,9E+09,-0.00051404,9E+09]];
-            !Set new robotTarget over new workObject and move torch 400 mm above it
             MoveJ Offs(RT0,200,0,0), v1000, fine, tWeldGun\WObj:=wobjUse;
-
-            !Move to a suitable point to start X correction
-            !Movel Offs(RT0,20,-10,-t1/2),v200,z50,tWeldGun\WObj:=wobjUse;
-            !Search_1D RTSx ,Offs(RT0,20,-10,-t1/2) , Offs(RT0,5,-10,-t1/2), v200, tWeldGun\WObj:=wobjUse;            
-            !Movel Offs(RT0,200,0,0),v200,z50,tWeldGun\WObj:=wobjUse;
 
             !Move to a suitable point to start Y and Z correction
             Movej Offs(RT0,50,-30,30), v1000, fine, tWeldGun\WObj:=wobjUse;
@@ -830,6 +823,7 @@ MODULE A_15542_1_Railing_St2_LS
             myY:=RTSy.trans.y;
             myZ:=RTSz.trans.z;
 
+            !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
             Movel Offs(RT0,50,-5,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSx ,Offs(RT0,5,-5,15) , Offs(RT0,-15,-5,15), v200, tWeldGun\WObj:=wobjUse;  
@@ -840,13 +834,7 @@ MODULE A_15542_1_Railing_St2_LS
             
         ELSEIF SP=2 THEN !For SP refer to page 24 of sotware analysis handbook
         
-            !Set new robotTarget over new workObject and move torch 400 mm above it
             MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
-
-            !Move to a suitable point to start X correction
-            !Movel Offs(RT0,20,10,-t1/2),v200,z50,tWeldGun\WObj:=wobjUse;
-            !Search_1D RTSx ,Offs(RT0,20,10,-t1/2) , Offs(RT0,5,10,-t1/2), v200, tWeldGun\WObj:=wobjUse;            
-            !Movel Offs(RT0,20,0,0),v200,z50,tWeldGun\WObj:=wobjUse;
 
             !Move to a suitable point to start Y and Z correction
             Movej Offs(RT0,100,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse; 
@@ -860,6 +848,7 @@ MODULE A_15542_1_Railing_St2_LS
             myY:=RTSy.trans.y;
             myZ:=RTSz.trans.z;
 
+            !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
             Movel Offs(RT0,50,-5,-15),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSx ,Offs(RT0,5,-5,-15) , Offs(RT0,-15,-5,-15), v200, tWeldGun\WObj:=wobjUse;  
@@ -869,14 +858,7 @@ MODULE A_15542_1_Railing_St2_LS
             
         ELSEIF SP=3 THEN !For SP refer to page 24 of sotware analysis handbook
             
-            !RT:= [[74.30,18.32,-0.13],[0.500034,-0.500013,-0.499987,0.499966],[0,0,-1,0],[369.992,9E+09,9E+09,9E+09,0.000251827,9E+09]] ;
-            !Set new robotTarget over new workObject and move torch 400 mm above it
             MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
-
-            !Move to a suitable point to start X correction
-            !Movel Offs(RT0,20,-5,t1/2),v200,z50,tWeldGun\WObj:=wobjUse;
-            !Search_1D RTSx ,Offs(RT0,20,-5,t1/2) , Offs(RT0,-5,-5,t1/2), v200, tWeldGun\WObj:=wobjUse;            
-            !Movel Offs(RT0,20,0,0),v200,z50,tWeldGun\WObj:=wobjUse;
 
             !Move to a suitable point to start Y and Z correction
             Movej Offs(RT0,100,30,30),v1000,z50,tWeldGun\WObj:=wobjUse; 
@@ -890,6 +872,7 @@ MODULE A_15542_1_Railing_St2_LS
             myY:=RTSy.trans.y;
             myZ:=RTSz.trans.z;
 
+            !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
             Movel Offs(RT0,50,5,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSx, Offs(RT0,5,5,15) , Offs(RT0,-15,5,15), v200, tWeldGun\WObj:=wobjUse;  
@@ -900,13 +883,7 @@ MODULE A_15542_1_Railing_St2_LS
             
         ELSEIF SP=4 THEN !For SP refer to page 24 of sotware analysis handbook
             
-            !Set new robotTarget over new workObject and move torch 400 mm above it
             Movej Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
-
-            !Move to a suitable point to start X correction
-            !Movel Offs(RT0,20,10,t1/2),v200,z50,tWeldGun\WObj:=wobjUse;
-            !Search_1D RTSx ,Offs(RT0,20,10,t1/2) , Offs(RT0,-5,10,t1/2), v200, tWeldGun\WObj:=wobjUse;            
-            !Movel Offs(RT0,20,0,0),v200,z50,tWeldGun\WObj:=wobjUse;
 
             !Move to a suitable point to start Y and Z correction
             Movej Offs(RT0,100,30,-30),v1000,z50,tWeldGun\WObj:=wobjUse; 
@@ -920,6 +897,7 @@ MODULE A_15542_1_Railing_St2_LS
             myY:=RTSy.trans.y;
             myZ:=RTSz.trans.z;
 
+            !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
             Movel Offs(RT0,50,5,-15),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSx ,Offs(RT0,5,5,-15) , Offs(RT0,-15,5,-15), v200, tWeldGun\WObj:=wobjUse;  
@@ -930,13 +908,8 @@ MODULE A_15542_1_Railing_St2_LS
         
         ELSEIF SP=5 THEN !For SP refer to page 24 of sotware analysis handbook
 
-            !Set new robotTarget over new workObject and move torch 400 mm above it
             MoveJ Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
-            !Move to a suitable point to start X correction
-            !Movel Offs(RT0,20,-(10+c1),-t3/2),v200,z50,tWeldGun\WObj:=wobjUse;
-            !Search_1D RTSx ,Offs(RT0,20,-(10+c1),-t3/2) , Offs(RT0,-10,-(10+c1),-t3/2), v200, tWeldGun\WObj:=wobjUse;  
-            
             !Move to a suitable point to start Y and Z correction
             Movel Offs(RT0,(w-t3)/2+50,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse;
             Movel Offs(RT0,(w-t3)/2,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
@@ -950,6 +923,7 @@ MODULE A_15542_1_Railing_St2_LS
             myY:=RTSy.trans.y;
             myZ:=RTSz.trans.z;
 
+            !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
             Movel Offs(RT0,50,-20,9),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSx ,Offs(RT0,(w-t3)/2-15,-20,2) , Offs(RT0,-15,-20,2), v200, tWeldGun\WObj:=wobjUse;  
@@ -959,14 +933,8 @@ MODULE A_15542_1_Railing_St2_LS
             
         ELSEIF SP=6 THEN !For SP refer to page 24 of sotware analysis handbook
             
-            !Set new robotTarget over new workObject and move torch 400 mm above it
-            !MoveJ Offs(RT0,-5,300,-80),v200,z50,tWeldGun\WObj:=wobjUse;
             MoveJ Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
             
-            !Move to a suitable point to start X correction
-            !Movel Offs(RT0,20,10+c1,-t3/2),v200,z50,tWeldGun\WObj:=wobjUse;
-            !Search_1D RTSx ,Offs(RT0,20,10+c1,-t3/2) , Offs(RT0,-5,10+c1,-t3/2), v200, tWeldGun\WObj:=wobjUse;            
-
             !Move to a suitable point to start Y and Z correction
             Movel Offs(RT0,(w-t3)/2+50,20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSy ,Offs(RT0,(w-t3)/2-5,20,15) , Offs(RT0,(w-t3)/2-5,0,15), v200, tWeldGun\WObj:=wobjUse;
@@ -979,6 +947,7 @@ MODULE A_15542_1_Railing_St2_LS
             myY:=RTSy.trans.y;
             myZ:=RTSz.trans.z;
             
+            !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
             Movel Offs(RT0,50,20,9),v1000,z50,tWeldGun\WObj:=wobjUse; 
             Search_1D RTSx ,Offs(RT0,(w-t3)/2-15,20,5) , Offs(RT0,-15,20,5), v200, tWeldGun\WObj:=wobjUse;  
