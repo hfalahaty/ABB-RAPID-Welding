@@ -447,7 +447,7 @@ MODULE A_15542_1_Railing_St2_LS
         SetDO doExhaustStn2,1;
         
         !Bottom first Post weld
-        weldCorner 4,Odp{1},CorrPB{1},3;
+        weldCorner 7,Odp{1},CorrPB{1},3;
 
         !Bottom Second Post weld up to (n1-1)th Post
         FOR i FROM 2 TO n1-1 DO
@@ -482,7 +482,7 @@ MODULE A_15542_1_Railing_St2_LS
     
         !Bottom first Post weld
         WobjN:= WobjNew(Odp{1},1);
-        Weld_2G_v WobjN,OdP{1},CorrPT{1},"LT";
+        Weld_2G_H WobjN,OdP{1},CorrPB{1},"RB",t1;
 
         !Bottom Second Post weld up to (n1-1)th Post
         FOR i FROM 2 TO n1-1 DO
@@ -521,7 +521,7 @@ MODULE A_15542_1_Railing_St2_LS
         WobjN:= WobjNew(Odp{n1},4);
         Weld_2G_H WobjN,OdP{n1},CorrPB{n1},"LB",t1;
 
-        MoveJ Offs(overSt2,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot2;            
+        MoveJ Offs(overSt2,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot1;            
 
         !top side of Balusters welding
         FOR i FROM 1 TO n2 DO
