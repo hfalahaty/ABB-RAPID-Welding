@@ -305,7 +305,7 @@ MODULE A_15542_1_Railing_St1_LL
             TPWrite "Enter Balusters thicknes";
             TPReadNum t3,  "(Roundbar diameter, Pipe width)";
             TPWrite "         Enter distance Between ";
-            TPWrite "<<!!***LEFT SIDE***!!>> of first Baluster";
+            TPWrite "<<!!***Right SIDE***!!>> of first Post";
             TPWrite "           and disk surface";
             TPReadNum ds,  "";
             
