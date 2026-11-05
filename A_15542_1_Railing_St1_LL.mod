@@ -55,10 +55,10 @@ MODULE A_15542_1_Railing_St1_LL
     LOCAL PERS num OdP{5}:=[0,1274,2549,3833,0];
     
     !Corrected top position of Railing posts (abreviated as CorrPT)
-    LOCAL PERS pos CorrPT{5}:=[[3.81858,1.25155,0.388542],[7.88441,-0.109245,1.93808],[6.51629,0.131311,0.873431],[4.85447,3.51788,-19.1374],[0,0,0]];
+    LOCAL PERS pos CorrPT{5}:=[[4.13414,-0.587086,1.38827],[7.7123,-2.21646,2.01228],[4.68431,-1.56091,1.46719],[3.56828,1.18368,-17.7757],[0,0,0]];
     
     !Corrected Bottom position of Railing posts (abreviated as CorrPB)
-    LOCAL PERS pos CorrPB{5}:=[[1.08698,0.311778,0.681212],[6.31968,-0.172452,1.56103],[6.8026,1.04849,0.829187],[-0.218543,4.10219,-18.142],[0,0,0]];
+    LOCAL PERS pos CorrPB{5}:=[[-0.699873,0.165448,0.253602],[4.79497,-0.382911,1.55786],[3.55912,0.956906,1.00964],[-0.0496025,1.5218,-18.4805],[0,0,0]];
     
     !Ordinate Dimensions of Balusters (abreviated as odB)
     !Put origin on right side of railing then dimention for first internal edge after that all right side of railing's post to the end
@@ -70,32 +70,32 @@ MODULE A_15542_1_Railing_St1_LL
                         ,0,0,0,0,0,0,0,0,0,0];
 
     !Corrected top position of Balusters (abreviated as CorrBT)
-    LOCAL PERS pos CorrBT{50}:=[[3.33853,-0.00999472,3.82793],[3.43053,-0.244399,2.91918],[3.92591,-0.165747,1.04948],[6.50436,-0.171308,2.8368],[6.67808,0.0716619,4.39055]
-                        ,[7.40093,0.155027,5.03905],[8.03733,0.31242,3.15883],[8.76893,0.236347,3.66699],[8.63989,0.0727702,0.395828],[8.122,-0.248552,2.59639]
-                        ,[8.71676,0.704647,0.882409],[7.7265,-0.808985,-0.732353],[5.22369,-0.806813,-1.60408],[4.88801,0.453608,1.81726],[5.28737,0.154815,0.483456]
-                        ,[8.77099,0.789653,1.71257],[8.46096,0.309379,0.406869],[9.25616,0.951411,0.559075],[5.9293,0.714787,-0.407755],[7.00558,1.19869,-2.39573]
-                        ,[8.28776,1.51557,0.0778827],[5.21404,1.68374,-1.44521],[7.80664,1.52032,-2.15387],[7.56116,2.32473,-2.30728],[5.39578,2.24436,-3.91747]
-                        ,[4.07136,0.955468,-3.27322],[4.72155,0.872496,0.732868],[5.70009,0.874963,2.03313],[5.37781,1.84309,1.62743],[6.26093,1.52158,2.03563]
-                        ,[5.62351,2.48851,0.500006],[5.20852,2.40511,-0.142596],[5.45791,2.89063,1.62539],[4.24304,3.21021,2.98203],[3.92208,4.16905,-1.33912]
-                        ,[3.82778,3.21259,0.582324],[3.4223,3.13208,0.509469],[3.67847,3.13313,-0.381421],[2.47807,3.53317,-1.33792],[0,0,0]
+    LOCAL PERS pos CorrBT{50}:=[[2.69326,-0.983252,4.12014],[3.18261,-1.38696,2.97579],[3.43613,-1.38903,1.69602],[4.95936,-1.2272,3.04808],[5.3822,-0.980061,5.01017]
+                        ,[6.49958,-1.2216,5.26369],[7.23104,-1.14381,3.7847],[7.54888,-1.30205,3.8766],[7.25737,-1.55349,0.558479],[6.58683,-1.7108,3.46066]
+                        ,[7.49624,-1.79013,1.04233],[6.76325,-1.71334,-0.493172],[3.76197,-1.79273,-1.4509],[3.34114,-2.35332,2.6599],[4.33187,-2.43508,1.35826]
+                        ,[7.89253,-2.11251,1.77527],[6.59855,-1.62873,1.69339],[8.14052,-1.46752,1.6055],[4.90137,-1.46391,-0.398207],[5.62857,-1.30337,-0.722348]
+                        ,[7.57883,-0.984431,0.0944827],[3.02858,-0.742881,0.736179],[5.71453,-0.663714,-1.12494],[6.5976,-0.818947,-0.308569],[3.59416,-1.06192,-2.80874]
+                        ,[3.11127,-1.14471,-2.15599],[4.31165,-1.54776,1.93685],[4.79669,-1.38501,3.21488],[3.83243,-1.30542,3.04584],[4.79271,-1.14405,3.05873]
+                        ,[3.74668,-0.902225,1.77426],[5.38158,-0.580131,0.25478],[4.23614,-0.503273,2.4898],[3.35406,-0.419839,1.85324],[2.78784,-0.42075,0.0968641]
+                        ,[2.15113,-0.258251,1.6088],[2.31126,0.301503,1.20769],[1.57783,0.301722,0.162338],[0.927572,0.783222,-1.90026],[0,0,0]
                         ,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]
                         ,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
 
     !Corrected bottom position of Balusters (abreviated as CorrBB)
-    LOCAL PERS pos CorrBB{50}:=[[0.368692,0.316599,2.88053],[0.781271,-0.649687,2.60814],[0.449198,0.0619195,3.14358],[0.938114,0.139093,2.63812],[2.57117,0.220155,1.96937]
-                        ,[3.0587,0.304174,1.71704],[4.1769,0.627665,-0.345726],[-0.323935,0.709557,2.03797],[2.9667,0.789623,1.52878],[4.4906,0.630907,-0.50777]
-                        ,[4.97724,0.305109,-1.78939],[3.79256,0.0618233,1.10178],[4.43067,0.0609378,-0.142178],[4.8306,0.0598188,1.42183],[4.42768,0.0614389,1.42234]
-                        ,[5.06958,0.143549,4.66012],[5.38856,0.386412,-0.569096],[6.51657,0.791002,-0.495269],[5.615,1.20016,0.61473],[6.18854,1.44263,1.08286]
-                        ,[5.80465,1.76838,3.14641],[6.1833,1.05779,-0.0298136],[3.94777,2.08598,1.27337],[6.61623,2.08332,-0.105991],[6.29172,2.08351,-1.28775]
-                        ,[2.48711,1.84726,-4.70528],[2.24281,1.92725,3.13173],[4.19445,2.08059,2.8792],[3.9452,1.61403,1.44567],[4.03813,2.23786,1.19767]
-                        ,[6.29264,2.56287,4.6201],[3.30371,2.97058,5.20799],[3.69543,3.13341,2.48761],[3.45983,2.96749,2.57539],[2.23963,2.80626,-0.576694]
-                        ,[1.18405,3.1296,2.25996],[0.133507,3.37518,3.07113],[-0.434462,3.86362,1.75434],[-1.71209,4.10647,1.18725],[0,0,0]
+    LOCAL PERS pos CorrBB{50}:=[[0.545633,0.139401,2.412],[0.629178,0.222055,2.6648],[1.11463,0.222188,1.61787],[0.454358,0.461359,2.3987],[1.85071,-0.325297,2.00085]
+                        ,[3.4647,0.461856,0.779065],[2.98524,0.302472,-0.0163419],[-0.923679,0.300915,1.19394],[2.25828,0.22036,1.52431],[2.90035,0.223362,-0.868869]
+                        ,[3.06192,0.382673,-0.16556],[2.49722,0.30503,0.858976],[3.06409,0.143606,-0.697866],[3.04692,0.30261,1.76252],[2.54996,0.53874,1.76255]
+                        ,[3.35719,0.536535,4.41114],[3.62335,0.144725,0.085821],[4.25907,0.538452,-0.267803],[4.0848,1.01722,0.30279],[4.25995,1.42151,1.21155]
+                        ,[4.51446,1.74999,2.87206],[4.32752,1.18997,1.12027],[1.84178,1.66807,1.38323],[5.14945,1.75289,0.411385],[4.7469,1.66664,-1.82255]
+                        ,[1.82421,0.705725,-2.01707],[1.27084,1.58635,3.45984],[4.42435,1.58861,2.70662],[2.88733,1.50753,2.71326],[3.03466,1.34039,1.61995]
+                        ,[4.66987,1.42367,4.50141],[2.64371,1.67423,5.477],[3.38539,1.91931,2.53645],[1.8282,1.8408,1.60335],[1.5126,1.6779,0.0934343]
+                        ,[0.289681,1.59572,2.38404],[-0.0313091,1.5932,2.46632],[-1.06654,1.50957,0.889291],[-2.35861,1.75642,-0.0593215],[0,0,0]
                         ,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]
                         ,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
                         
     LOCAL PERS num wobjA:=45; !Angle of table
 
-    LOCAL PERS num partCounter:=11; !counter
+    LOCAL PERS num partCounter:=12; !counter
     
     !**************************************************************************************************************    
     !**********************************************local variables*************************************************    
@@ -512,12 +512,14 @@ MODULE A_15542_1_Railing_St1_LL
         !Bottom last Post weld
         WobjN:= WobjNew(Odp{n1},2);
         Weld_2G_v WobjN,OdP{n1},CorrPT{n1},"LT",t1;
+        MoveJ Offs(overSt1,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot1;
 
         !Bottom side of Balusters welding
         FOR i FROM 1 TO n2 DO
             WobjN:= WobjNew(OdB{i},5);
             Weld_ARC_N WobjN,OdB{i},CorrBT{i},0;
-        ENDFOR                
+        ENDFOR
+        MoveJ Offs(overSt1,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot1;                
 
         SetDO doExhaustStn1,0;
         
@@ -563,102 +565,102 @@ MODULE A_15542_1_Railing_St1_LL
             
             WobjN:= WobjNew(Odp,sp);
             Weld_2G_H WobjN,OdP,CorrP,"RB",t1;
-            Weld_3F_SW WobjN,OdP,CorrP,PosAn,t1;
-            Weld_3G_E WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
+            Weld_3G_E WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=2 THEN
             
             WobjN:= WobjNew(Odp,sp);
             Weld_2G_H WobjN,OdP,CorrP,"RB",t1;
-            Weld_3F_SW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
             WobjN.oframe.trans.z:=WobjN.oframe.trans.z-t1;
-            Weld_3F_SE WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=3 THEN
             
             WobjN:= WobjNew(Odp,sp);
             Weld_2G_H WobjN,OdP,CorrP,"LB",t1;
-            Weld_3F_SE WobjN,OdP,CorrP,PosAn,t1;
-            Weld_3G_W WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
+            Weld_3G_W WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=4 THEN
             
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_V WobjN,OdP,CorrP,"LB",t1;
-            Weld_3F_NW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NW WobjN,OdP,CorrP,PosAn,w;
             WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
-            Weld_3F_SW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=5 THEN
             
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_V WobjN,OdP,CorrP,"LB",t1;
-            Weld_3F_NW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NW WobjN,OdP,CorrP,PosAn,w;
             WobjN.oframe.trans.z:=WobjN.oframe.trans.z-t1;
             Weld_2G_V WobjN,OdP,CorrP,"LB",t1;
-            Weld_3F_NE WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NE WobjN,OdP,CorrP,PosAn,w;
             WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
-            Weld_3F_SE WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
             WobjN.oframe.trans.z:=WobjN.oframe.trans.z+t1;
-            Weld_3F_SW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
         
         ELSEIF cornerPositionNumber=6 THEN
             
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_V WobjN,OdP,CorrP,"LB",t1;
-            Weld_3F_NE WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NE WobjN,OdP,CorrP,PosAn,w;
             WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
-            Weld_3F_SE WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=7 THEN
             
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_H WobjN,OdP,CorrP,"RB",t1;
-            Weld_3F_NW WobjN,OdP,CorrP,PosAn,t1;
-            Weld_3G_E WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NW WobjN,OdP,CorrP,PosAn,w;
+            Weld_3G_E WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=8 THEN
             
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_H WobjN,OdP,CorrP,"RB",t1;
-            Weld_3F_NW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NW WobjN,OdP,CorrP,PosAn,w;
             WobjN.oframe.trans.z:=WobjN.oframe.trans.z-t1;
-            Weld_3F_NE WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NE WobjN,OdP,CorrP,PosAn,w;
         
         ELSEIF cornerPositionNumber=9 THEN
             
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_H WobjN,OdP,CorrP,"LB",t1;
-            Weld_3F_NE WobjN,OdP,CorrP,PosAn,t1;
-            Weld_3G_W WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NE WobjN,OdP,CorrP,PosAn,w;
+            Weld_3G_W WobjN,OdP,CorrP,PosAn,w;
 
         ELSEIF cornerPositionNumber=10 THEN
             
             WobjN:= WobjNew(OdP,sp);
-            Weld_3F_SE_L WobjN,OdP,CorrP,PosAn,w,t1;
-            Weld_3F_SW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_SE_L WobjN,OdP,CorrP,PosAn,w,t2;
+            Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
             Weld_2G_H WobjN,OdP,CorrP,"RB",t1;
 
         ELSEIF cornerPositionNumber=11 THEN
             
             WobjN:= WobjNew(OdP,sp);
-            Weld_3F_SE WobjN,OdP,CorrP,PosAn,t1;
-            Weld_3F_SW_L WobjN,OdP,CorrP,PosAn,w,t1;
+            Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
+            Weld_3F_SW_L WobjN,OdP,CorrP,PosAn,w,t2;
             Weld_2G_H WobjN,OdP,CorrP,"LB",t1;
 
         ELSEIF cornerPositionNumber=12 THEN
             
             WobjN:= WobjNew(OdP,sp);
-            Weld_3F_NE_L WobjN,OdP,CorrP,PosAn,w,t1;
+            Weld_3F_NE_L WobjN,OdP,CorrP,PosAn,w,t2;
             Weld_2G_H WobjN,OdP,CorrP,"RB",t1;
-            Weld_3F_NW WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NW WobjN,OdP,CorrP,PosAn,w;
 
         ELSEIF cornerPositionNumber=13 THEN
             
             WobjN:= WobjNew(OdP,sp);
-            Weld_3F_NE WobjN,OdP,CorrP,PosAn,t1;
+            Weld_3F_NE WobjN,OdP,CorrP,PosAn,w;
             Weld_2G_H WobjN,OdP,CorrP,"LB",t1;
-            Weld_3F_NW_L WobjN,OdP,CorrP,PosAn,w,t1;
+            Weld_3F_NW_L WobjN,OdP,CorrP,PosAn,w,t2;
 
         ENDIF
         !!
