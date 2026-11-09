@@ -75,16 +75,16 @@ MODULE AAA_General
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[1493.08,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
-    LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[1307.66,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
-    LOCAL PERS robtarget RT2 := [[-1,0,-1],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3357.4,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
-    LOCAL PERS robtarget Rt3 := [[-1,-2,-2],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4623.51,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
-    LOCAL PERS robtarget RT4 := [[-1,-2,0],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[5371.5,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
-    LOCAL PERS robtarget RT5 := [[-1,0,-1],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[3357.4,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
-    LOCAL PERS robtarget RT6 := [[-1,2,-2],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[4623.51,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
+    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3760.71,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT1 := [[0,2,0],[0.93,0.19,-0.19,0.25],[1,-1,-1,0],[722.999,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3G_E
+    LOCAL PERS robtarget RT2 := [[-1,-2,2],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[1998.08,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
+    LOCAL PERS robtarget Rt3 := [[-1,-2,-2],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[3262.62,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
+    LOCAL PERS robtarget RT4 := [[-1,-2,0],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[4011.59,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
+    LOCAL PERS robtarget RT5 := [[-1,0,-1],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[1998.08,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
+    LOCAL PERS robtarget RT6 := [[-1,2,-2],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[3262.62,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
 
-    LOCAL PERS robtarget RB1 := [[1,0,-6],[0.75,-0.54,-0.21,0.28],[1,-1,-1,0],[1493.08,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
-    LOCAL PERS robtarget RB2 := [[0,0,-7],[0.75,0.54,-0.21,-0.28],[0,-1,-2,0],[4542.24,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
+    LOCAL PERS robtarget RB1 := [[1,0,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[3760.71,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
+    LOCAL PERS robtarget RB2 := [[0,0,-7],[0.75,0.54,-0.21,-0.28],[0,-1,-2,0],[3179.99,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
     
     !**************************************************************************************************************    
     !************************************************Robot DATA*****************************************************    
@@ -104,7 +104,7 @@ MODULE AAA_General
     TASK PERS weavedata weavePG3F:=[1,1,2,5.5,0,0.1,0,0.1,0,0,0,0,0,0,0];
     TASK PERS weavedata weave2F_a5:=[2,2,2,6,0,0.1,0,0.1,0,0,0,0,0,0,0];
     TASK PERS weavedata weave2F_East:=[2,1,3,6,0,0.15,0,0.05,0,0,-45,0,0,0,0];
-    TASK PERS weavedata weave3F:=[1,1,4,4,3,0.1,0,0.1,0,0,0,0,0,0,0];
+    TASK PERS weavedata weave3F:=[1,1,4,5,3,0.1,0,0.1,0,0,0,0,0,0,0];
     TASK PERS weavedata weave2F_West:=[2,1,3,6,0,0.05,0,0.15,0,0,45,0,0,0,0];
     
     TASK PERS seamdata smUse:=[1,0.4,[2,0,0,0,0,0,0,0,0],0,0,0,0,0,[2,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0.4];
@@ -126,7 +126,6 @@ MODULE AAA_General
     
     LOCAL VAR wobjdata Cwobj; 
     LOCAL VAR pos myPos;
-    TASK PERS welddata weld_4F_2:=[13,11,[4,0,0,0,0,7,0,0,0],[10,0,0,0,0,0,0,0,0]];     
     
     !**************************************************************************************************************    
     
@@ -548,7 +547,7 @@ MODULE AAA_General
         
         !RT2:= [[0,0,0],[0.449513,-0.755714,-0.467429,0.0913496],[0,-2,1,1],[1864.98,9E+09,9E+09,9E+09,29.9993,9E+09]] ;
 
-        RT2.trans:=[-1,0,-1];
+        RT2.trans:=[-1,-3,3];
         RT2.rot:=[0.45,-0.76,-0.47,0.09];
         RT2.robconf:=[0,-2,1,1];
 
@@ -671,7 +670,7 @@ MODULE AAA_General
         wobjUse.oframe.trans:= wobjUse.oframe.trans+correction;
 
         
-        RT3.trans:=[-1,-2,-2];
+        RT3.trans:=[-1,-3,-3];
         RT3.rot:=[0.76,-0.45,-0.09,0.47];
         RT3.robconf:=[1,-1,-1,0];
 
@@ -871,7 +870,7 @@ MODULE AAA_General
 
         !RT5:= [[-2.83,3.59,0.11],[0.330995,0.88275,0.0400167,-0.331049],[0,-1,1,0],[1865.01,9E+09,9E+09,9E+09,0.000329907,9E+09]] ;
 
-        RT5.trans:=[-1,0,-1];
+        RT5.trans:=[-1,3,3];
         RT5.rot:=[0.45,0.76,-0.47,-0.09];
         RT5.robconf:=[1,-1,1,0];
 
@@ -992,7 +991,7 @@ MODULE AAA_General
         
         !RT6:= [[-2.60,13.00,-13.30],[0.86,0.27,-0.40,0.12],[0,0,-2,0],[1750.01,9E+09,9E+09,9E+09,29.9989,9E+09]] ;
 
-        RT6.trans:=[-1,2,-2];
+        RT6.trans:=[-1,3,-3];
         RT6.rot:=[0.76,0.45,-0.09,-0.47];
         RT6.robconf:=[0,0,-2,0];
 
