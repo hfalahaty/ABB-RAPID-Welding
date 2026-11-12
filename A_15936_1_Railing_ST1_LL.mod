@@ -1,4 +1,4 @@
-MODULE A_15936_1_Railing_ST1_LL
+MODULE A_15936_1_Railing_ST1_LL_FP
     
     !You can find explanation about the variables along with drawings, on which the variables are marked, in <<sotware analysis handbook>> pages 1 and 10.
     !You can find this document on system's backup USB, inside of documents folder.
@@ -176,7 +176,7 @@ MODULE A_15936_1_Railing_ST1_LL
     
     !**************************************************************************************************************    
     
-    PROC Main_15936_1_Railing_ST1_LL()
+    PROC Main_15936_1_Railing_ST1_LL_FP()
         
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!##################################################!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
@@ -588,8 +588,8 @@ MODULE A_15936_1_Railing_ST1_LL
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_V WobjN,OdP,CorrP,"LB",t1;
             Weld_3F_NW WobjN,OdP,CorrP,PosAn,w;
-            WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
-            Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
+            !WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
+            !Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=5 THEN
             
@@ -599,18 +599,18 @@ MODULE A_15936_1_Railing_ST1_LL
             WobjN.oframe.trans.z:=WobjN.oframe.trans.z-t1;
             Weld_2G_V WobjN,OdP,CorrP,"LB",t1;
             Weld_3F_NE WobjN,OdP,CorrP,PosAn,w;
-            WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
-            Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
-            WobjN.oframe.trans.z:=WobjN.oframe.trans.z+t1;
-            Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
+            !WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
+            !Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
+            !WobjN.oframe.trans.z:=WobjN.oframe.trans.z+t1;
+            !Weld_3F_SW WobjN,OdP,CorrP,PosAn,w;
         
         ELSEIF cornerPositionNumber=6 THEN
             
             WobjN:= WobjNew(OdP,sp);
             Weld_2G_V WobjN,OdP,CorrP,"LB",t1;
             Weld_3F_NE WobjN,OdP,CorrP,PosAn,w;
-            WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
-            Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
+            !WobjN.oframe.trans.y:=WobjN.oframe.trans.y-t1;
+            !Weld_3F_SE WobjN,OdP,CorrP,PosAn,w;
             
         ELSEIF cornerPositionNumber=7 THEN
             
