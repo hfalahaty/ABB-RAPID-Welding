@@ -75,16 +75,16 @@ MODULE AAA_General
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,0],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3260.69,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
-    LOCAL PERS robtarget RT1 := [[0,2,0],[0.93,0.19,-0.19,0.25],[1,-1,-1,0],[722.836,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3G_E
-    LOCAL PERS robtarget RT2 := [[-1,-2,3],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[1997.98,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
-    LOCAL PERS robtarget Rt3 := [[-1,-2,-3],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[3261,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
-    LOCAL PERS robtarget RT4 := [[-1,-2,0],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[4010.66,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
-    LOCAL PERS robtarget RT5 := [[-1,3,3],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[1997.98,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
-    LOCAL PERS robtarget RT6 := [[-1,2,-3],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[3261,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
+    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[4108.27,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[1820.14,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
+    LOCAL PERS robtarget RT2 := [[-1,-2,3],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3186.49,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
+    LOCAL PERS robtarget Rt3 := [[-1,-2,-3],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4108.27,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
+    LOCAL PERS robtarget RT4 := [[-1,-2,0],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[4856,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
+    LOCAL PERS robtarget RT5 := [[-1,3,3],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[3186.49,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
+    LOCAL PERS robtarget RT6 := [[-1,2,-3],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[4108.27,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
 
-    LOCAL PERS robtarget RB1 := [[2,-2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[3678.81,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
-    LOCAL PERS robtarget RB2 := [[2,2,-7],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[3178.53,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
+    LOCAL PERS robtarget RB1 := [[2,-2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[4525.51,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
+    LOCAL PERS robtarget RB2 := [[2,2,-7],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[4025.63,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
     
     !**************************************************************************************************************    
     !************************************************Robot DATA*****************************************************    
@@ -1163,8 +1163,8 @@ MODULE AAA_General
         !Welding
         ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
         ArcCEnd p1, p4, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p1,-3,0,2), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p1,-4,0,1), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+!        ArcLStart offs(p1,-3,0,2), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+!        ArcLEnd offs(p1,-4,0,1), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
         MoveL Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1230,8 +1230,8 @@ MODULE AAA_General
         !Welding
         ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
         ArccEnd p2, p3, v4000, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p2,-3,0,-2), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p2,-4,0,-1), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+!        ArcLStart offs(p2,-3,0,-2), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+!        ArcLEnd offs(p2,-4,0,-1), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
         
         MoveL Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
