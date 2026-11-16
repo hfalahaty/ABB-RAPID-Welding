@@ -75,7 +75,7 @@ MODULE AAA_General
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[4107.78,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT0 := [[0,0,0],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[4107.36,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
     LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[1818.94,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
     LOCAL PERS robtarget RT2 := [[-1,-2,3],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3933.14,9E+09,9E+09,9E+09,-40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
     LOCAL PERS robtarget Rt3 := [[-1,-2,-3],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4604.14,9E+09,9E+09,9E+09,-40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
@@ -83,8 +83,8 @@ MODULE AAA_General
     LOCAL PERS robtarget RT5 := [[-1,3,3],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[3185.33,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
     LOCAL PERS robtarget RT6 := [[-1,2,-3],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[4107.78,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
 
-    LOCAL PERS robtarget RB1 := [[2,-2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[4525.01,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
-    LOCAL PERS robtarget RB2 := [[0,2,-7],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[4024.34,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
+    LOCAL PERS robtarget RB1 := [[2,-2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[4521.31,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
+    LOCAL PERS robtarget RB2 := [[0,2,-7],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[4026.58,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
     
     !**************************************************************************************************************    
     !************************************************Robot DATA*****************************************************    
@@ -379,20 +379,28 @@ MODULE AAA_General
         !Welding top side
         IF LR="LB" THEN
             ArcLStart Offs(RT0,0,0,lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcL Offs(RT0,0,0,0),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT0,0,0,lengh),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+            ArcL Offs(RT0,0,0,lengh-2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT0,0,0,-2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+        ELSEIF LR="MB" THEN
+            ArcLstart Offs(RT0,0,0,-lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcL Offs(RT0,0,0,-lengh-2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT0,0,0,2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
         ELSEIF LR="RB" THEN
             ArcLstart Offs(RT0,0,0,-lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcL Offs(RT0,0,0,0),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT0,0,0,-(lengh)),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+            ArcL Offs(RT0,0,0,-lengh+2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT0,0,0,2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
         ELSEIF LR="LT" THEN
             ArcLStart Offs(RT0,0,0,lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcL Offs(RT0,0,0,0),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT0,0,0,lengh),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+            ArcL Offs(RT0,0,0,lengh-2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT0,0,0,-2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+        ELSEIF LR="MT" THEN
+            ArcLStart Offs(RT0,0,0,lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcL Offs(RT0,0,0,-lengh-2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT0,0,0,2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
         ELSEIF LR="RT" THEN
             ArcLstart Offs(RT0,0,0,-lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcL Offs(RT0,0,0,0),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT0,0,0,-(lengh)),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+            ArcL Offs(RT0,0,0,-lengh+2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT0,0,0,2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
         ENDIF
         
         !Over weld position
