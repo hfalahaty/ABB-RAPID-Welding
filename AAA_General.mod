@@ -75,16 +75,16 @@ MODULE AAA_General
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3846.52,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
-    LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[2078.76,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
-    LOCAL PERS robtarget RT2 := [[-1,-2,3],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3465.36,9E+09,9E+09,9E+09,-40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
-    LOCAL PERS robtarget Rt3 := [[-1,-2,-3],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4344.75,9E+09,9E+09,9E+09,-40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
-    LOCAL PERS robtarget RT4 := [[-1,-2,0],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[4594.75,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
-    LOCAL PERS robtarget RT5 := [[-1,3,3],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[2718.47,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
-    LOCAL PERS robtarget RT6 := [[-1,2,-3],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[3846.52,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
+    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3845.7,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[2078.11,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
+    LOCAL PERS robtarget RT2 := [[-1,-2,3],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3467.76,9E+09,9E+09,9E+09,-40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
+    LOCAL PERS robtarget Rt3 := [[-1,-2,-3],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4344.59,9E+09,9E+09,9E+09,-40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
+    LOCAL PERS robtarget RT4 := [[-1,-2,0],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[4594.59,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
+    LOCAL PERS robtarget RT5 := [[-1,3,3],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[2717.56,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
+    LOCAL PERS robtarget RT6 := [[-1,2,-3],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[3845.7,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
 
-    LOCAL PERS robtarget RB1 := [[2,-2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[4257.63,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
-    LOCAL PERS robtarget RB2 := [[0,2,-7],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[3761.88,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
+    LOCAL PERS robtarget RB1 := [[2,-2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[4258.75,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
+    LOCAL PERS robtarget RB2 := [[0,2,-7],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[3760.89,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
     
     !**************************************************************************************************************    
     !************************************************Robot DATA*****************************************************    
@@ -108,7 +108,7 @@ MODULE AAA_General
     TASK PERS weavedata weave2F_West:=[2,1,3,6,0,0.05,0,0.15,0,0,45,0,0,0,0];
     
     TASK PERS seamdata smUse:=[1,0.4,[2,0,0,0,0,0,0,0,0],0,0,0,0,0,[2,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0.4];
-    TASK PERS welddata weld_4F_1:=[11,10,[11,0,0,0,0,7,0,0,0],[11,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_4F_1:=[12,11,[11,0,0,0,0,11,0,0,0],[11,0,0,0,0,0,0,0,0]];
     TASK PERS weavedata weave2G2F_a4:=[1,1,2,4,0,0.1,0,0.1,0,0,0,0,0,0,0];
     
     !**************************************************************************************************************    
@@ -1148,7 +1148,7 @@ MODULE AAA_General
         
         p0:=Offs(RB1,0,0,0);
         p2:=offs(p0,-(1.9),0,-(3));
-        p3:=offs(p0,-(8),0,-(8));
+        p3:=offs(p0,-(7),0,-(7));
 
         !Over weld position
         MoveJ Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1164,7 +1164,7 @@ MODULE AAA_General
         RB1.rot:=[0.54,-0.75,-0.28,0.21];
         p0:=Offs(RB1,0,0,0);
         p1:=Offs(p0,-(1.9),0,(3));
-        p4:=Offs(p0,-(8),0,(8));
+        p4:=Offs(p0,-(7),0,(7));
 
         !Over weld position
         MoveJ Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1217,7 +1217,7 @@ MODULE AAA_General
         !Over weld position
         p0:=Offs(RB2,0,0,0); !correct position of wire end, aimed to (baluster's center-1)
         p1:=Offs(p0,-(1.9),0,(3));
-        p4:=Offs(p0,-(8),0,(8));
+        p4:=Offs(p0,-(7),0,(7));
         MoveJ Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
         !Welding
@@ -1236,7 +1236,7 @@ MODULE AAA_General
         !p0:=Offs(RB2,18,-2,-(t3/2-1)+8);
         p0:=Offs(RB2,0,0,0);
         p2:=offs(p0,-(1.9),0,-(3));
-        p3:=offs(p0,-(8),0,-(8));
+        p3:=offs(p0,-(7),0,-(7));
         Movej Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding
