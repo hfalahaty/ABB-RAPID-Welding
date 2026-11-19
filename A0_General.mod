@@ -384,7 +384,7 @@ MODULE A0_General
         ELSEIF LR="MB" THEN
             ArcLstart Offs(RT0,0,0,-lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
             ArcL Offs(RT0,0,0,-lengh-1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT0,0,0,1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+            ArcLEnd Offs(RT0,0,0,-1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
         ELSEIF LR="RB" THEN
             ArcLstart Offs(RT0,0,0,-lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
             ArcL Offs(RT0,0,0,-lengh+1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
@@ -394,9 +394,9 @@ MODULE A0_General
             ArcL Offs(RT0,0,0,lengh-1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
             ArcLEnd Offs(RT0,0,0,-1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
         ELSEIF LR="MT" THEN
-            ArcLStart Offs(RT0,0,0,lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
+            ArcLStart Offs(RT0,0,0,-lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
             ArcL Offs(RT0,0,0,-lengh-1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT0,0,0,1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
+            ArcLEnd Offs(RT0,0,0,-1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;      
         ELSEIF LR="RT" THEN
             ArcLstart Offs(RT0,0,0,-lengh/2),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
             ArcL Offs(RT0,0,0,-lengh+1),v100,smUse,weld_2F2G_a4,fine,tWeldGun\WObj:=wobjUse;
