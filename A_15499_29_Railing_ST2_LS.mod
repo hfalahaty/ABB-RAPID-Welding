@@ -29,13 +29,13 @@ MODULE A_15499_29_Railing_ST2_LS
     LOCAL PERS num w:=50;
     
     !Number of Posts
-    LOCAL PERS num n1:=3;
+    LOCAL PERS num n1:=2;
     
     !Number of Balusters
-    LOCAL PERS num n2:=24;
+    LOCAL PERS num n2:=12;
     
     !Distance Between <<!!***Right SIDE***!!>> of first post scabilon and disk surface
-    LOCAL PERS num ds:=761;   
+    LOCAL PERS num ds:=767;   
 
     !Distance between balusters
     LOCAL PERS num d1:=85;
@@ -52,29 +52,29 @@ MODULE A_15499_29_Railing_ST2_LS
     !Ordinate Dimensions of railing's Posts (abreviated as odP)
     !Put origin on right side of railing then dimention for first internal edge after that all right side of railing's post to the end
     !Refer to page 10 of <<Railing code analysis>>
-    LOCAL PERS num OdP{5}:=[0,1238,2476,2797,0];
+    LOCAL PERS num OdP{5}:=[0,1233,2486,2802,0];
     
     !Corrected top position of Railing posts (abreviated as CorrPT)
-    LOCAL PERS pos CorrPT{5}:=[[2.90729,-2.18116,1.32395],[2.01139,-2.17539,1240.7],[2.21065,-0.969856,2466.54],[3.07881,5.16339,-12.4104],[0,0,0]];
+    LOCAL PERS pos CorrPT{5}:=[[0.971695,-3.71781,0.00679815],[0.98265,-2.59411,1221.38],[0.965865,-0.183133,2475.57],[3.07881,5.16339,-12.4104],[0,0,0]];
     
     !Corrected Bottom position of Railing posts (abreviated as CorrPB)
-    LOCAL PERS pos CorrPB{5}:=[[3.14062,-0.153603,4.07459],[4.12296,0.488419,1241.8],[3.47727,0.557849,2469.45],[2.26688,5.31524,-11.6393],[0,0,0]];
+    LOCAL PERS pos CorrPB{5}:=[[2.55919,-2.40324,1.3422],[1.86671,-1.85176,1223.38],[0.98729,1.77098,2475.22],[2.26688,5.31524,-11.6393],[0,0,0]];
     
     !Ordinate Dimensions of Balusters (abreviated as odB)
     !Put origin on right side of railing then dimention for first internal edge after that all right side of railing's post to the end
     !Refer to page 10 of <<Railing code analysis>>
-    LOCAL PERS num OdB{50}:=  [93,189,284,380,475,570,666,761,856,952
-                        ,1047,1143,1331,1427,1522,1618,1713,1808,1904,1999
-                        ,2094,2190,2285,2381,2517,2610,2704,2729.3,2820.4,2911.6
+    LOCAL PERS num OdB{50}:=  [88,184,279,375,470,565,661,756,851,947
+                        ,1042,1138,1336,1432,1527,1623,1718,1813,1909,2004
+                        ,2099,2195,2290,2386,2517,2610,2704,2729.3,2820.4,2911.6
                         ,3002.7,3093.9,3185,3276.1,3367.3,3458.4,3549.6,3640.7,3731.9,0
                         ,0,0,0,0,0,0,0,0,0,0];
 
     !Corrected top position of Balusters (abreviated as CorrBT)
-    LOCAL PERS pos CorrBT{50}:=[[7.38888,-1.94866,98.2502],[5.84399,-2.11099,190.524],[3.05847,-2.03041,287.737],[7.22634,-2.18954,383.237],[3.43769,-2.27055,476.764]
-                        ,[3.93014,-2.1883,573.08],[6.72312,-2.18947,667.528],[3.37331,-2.10817,763.997],[3.53512,-2.03078,859.894],[2.7143,-1.8707,952.408]
-                        ,[2.65122,-1.86919,1050.23],[2.5409,-1.71008,1142.22],[5.28919,-1.71106,1335.14],[2.40475,-1.5507,1432.74],[2.95946,-1.31463,1522.88]
-                        ,[2.73069,-1.31167,1621.07],[2.63556,-1.23534,1714.3],[4.79198,-1.07176,1807.22],[2.53217,-1.23189,1900.08],[2.7977,-1.31377,2000.13]
-                        ,[3.83816,-0.347573,2097.3],[4.87957,-1.07212,2192.6],[4.4753,-0.82969,2284.94],[3.67961,-0.749489,2383.43],[3.82228,3.13229,-5.06386]
+    LOCAL PERS pos CorrBT{50}:=[[2.45334,-3.63434,92.1435],[1.73447,-3.31346,185.69],[1.81703,-3.15321,280.455],[2.05532,-3.07381,377.794],[1.89563,-2.82785,471.537]
+                        ,[1.82268,-2.66501,566.22],[4.30622,-2.34042,662.308],[-0.549752,-2.58112,756.275],[1.72815,-2.66216,854.374],[0.841412,-2.82715,948.7]
+                        ,[0.354373,-2.82661,1042.27],[2.04572,-2.5828,1136.32],[12.8716,-0.906752,1337.86],[-0.77078,-0.746845,1433.29],[-1.5797,-0.424394,1526.58]
+                        ,[-0.693696,-0.0174773,1620.75],[-0.927907,0.307819,1716.55],[12.5618,0.3081,1809.86],[-1.09091,-0.0162759,1910.78],[-1.42559,-0.18203,2001.27]
+                        ,[13.673,-0.263147,2094.32],[0.601225,-0.178856,2194.67],[1.09261,-0.096235,2290.07],[-1.75256,-0.0975238,2381.88],[3.82228,3.13229,-5.06386]
                         ,[2.93309,3.70357,-3.50951],[3.34137,4.58844,-6.69346],[5.4669,1.43364,3.45882],[5.3099,1.59056,1.8309],[5.94501,1.9971,3.30134]
                         ,[5.31953,2.47833,1.83822],[5.31912,2.31523,0.964815],[4.81954,2.79875,2.32699],[4.08431,3.12391,4.01431],[2.87021,3.44494,0.24322]
                         ,[2.62342,3.76688,1.60985],[3.20142,4.33449,1.22477],[2.38715,4.08813,-0.474715],[1.9045,4.25613,-0.635951],[0,0,0]
@@ -82,11 +82,11 @@ MODULE A_15499_29_Railing_ST2_LS
                         ,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
 
     !Corrected bottom position of Balusters (abreviated as CorrBB)
-    LOCAL PERS pos CorrBB{50}:=[[6.62816,0.324537,96.2529],[5.41238,0.160182,196.068],[5.81012,-0.00413441,288.738],[9.61501,-0.0833775,382.657],[5.40388,-0.164696,479.162]
-                        ,[5.07934,-0.162537,571.573],[8.63712,-0.240106,669.834],[8.38063,-0.479441,761.076],[5.72958,-0.0807675,856.829],[5.48018,0.159853,952.014]
-                        ,[4.08889,0.400972,1046.02],[5.31462,0.401791,1144.88],[6.94752,0.48457,1334.57],[5.30749,0.482807,1425.82],[6.54897,0.321814,1524.31]
-                        ,[5.2289,0.568364,1616.74],[4.82465,0.486707,1713.21],[5.80492,0.324907,1809.63],[6.47506,0.162605,1905.23],[4.82061,-0.634535,1998.51]
-                        ,[10.0123,0.324005,2095.99],[5.96634,0.405368,2187.21],[6.5281,0.488659,2284.83],[5.95356,0.566188,2380.42],[1.60374,4.99146,-1.15636]
+    LOCAL PERS pos CorrBB{50}:=[[1.98882,-1.77497,89.7108],[1.09793,-1.93774,187.268],[3.20139,-1.69937,283.525],[4.90619,-1.53941,376.603],[2.79447,-1.46192,472.534]
+                        ,[2.55266,-1.46076,567.208],[4.50278,-1.38207,662.526],[6.27462,-1.38299,754.715],[3.94806,-1.38366,851.108],[3.29815,-1.38328,945.04]
+                        ,[3.5289,-1.46329,1041.23],[3.77878,-1.54177,1137.69],[3.78955,1.12707,1339.43],[3.31597,1.11796,1435.1],[3.85268,1.36882,1528.84]
+                        ,[3.45231,1.69391,1625.88],[-0.414496,2.02169,1721.2],[2.55291,2.01683,1812.45],[1.77346,1.85999,1898.11],[2.25972,1.53275,2003.18]
+                        ,[-2.27953,1.45106,2098.1],[0.39519,1.8602,2190.84],[0.800737,2.1006,2286.71],[-0.97861,2.18394,2386.08],[1.60374,4.99146,-1.15636]
                         ,[-0.332249,5.39732,0.481232],[0.554457,5.64238,-1.41539],[5.52111,3.71404,2.48351],[4.50443,3.79408,2.31905],[4.01673,3.79647,1.83546]
                         ,[6.10427,4.03495,4.98647],[3.85355,4.35447,5.52419],[4.00761,4.51836,3.4753],[3.2794,4.59647,2.85192],[1.68054,4.75211,0.507195]
                         ,[0.645722,5.15469,2.11031],[-0.146597,5.39963,2.01753],[-1.28728,5.64924,1.84352],[-2.91112,5.56307,1.61965],[0,0,0]
@@ -118,7 +118,7 @@ MODULE A_15499_29_Railing_ST2_LS
 
     LOCAL PERS num dx:=60;    !X coordination of inside Down right edge of part
     LOCAL PERS num dy:=-567.5;  !Y coordination of Down right edge of part
-    LOCAL PERS num dz:=771;    !Z coordination of Down right edge of part
+    LOCAL PERS num dz:=777;    !Z coordination of Down right edge of part
 
     !**************************************************************************************************************    
     !**************************Special robot targets to use in procedures and functions****************************    
@@ -127,11 +127,11 @@ MODULE A_15499_29_Railing_ST2_LS
     !**************************************************************************************************************    
 
     !Reference Robtarget shows Down, inside part of frame (Abreviated as RefT page 25 of <<Sotware analysis handbook>> )
-    LOCAL PERS robtarget RefT:= [[75,-572.5,761],[0.5,-0.5,-0.5,0.5],[1,-2,1,0],[370,9E+09,9E+09,9E+09,0,9E+09]];!wRot2
+    LOCAL PERS robtarget RefT:= [[75,-572.5,767],[0.5,-0.5,-0.5,0.5],[1,-2,1,0],[370,9E+09,9E+09,9E+09,0,9E+09]];!wRot2
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot2
     
-    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3141,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[1904,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
     LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[1306.45,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
     LOCAL PERS robtarget RT2 := [[0,0,0],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3356.99,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
     LOCAL PERS robtarget Rt3 := [[0,0,0],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4621.83,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
@@ -146,7 +146,7 @@ MODULE A_15499_29_Railing_ST2_LS
     !********************************************Work Object data**************************************************    
     !**************************************************************************************************************   
     
-    LOCAL PERS wobjdata wobjST2:=[FALSE,FALSE,"STN2",[[0,0,0],[1,0,0,0]],[[61,-568.5,758],[1,0,0,0]]];
+    LOCAL PERS wobjdata wobjST2:=[FALSE,FALSE,"STN2",[[0,0,0],[1,0,0,0]],[[63,-567.5,764],[1,0,0,0]]];
 
     !**************************************************************************************************************    
     !*************************************************OLD DATA*****************************************************    
@@ -420,7 +420,7 @@ MODULE A_15499_29_Railing_ST2_LS
                         "",
                         "";      
                 ELSE
-                    MoveJ safeST2,v1000,z50,tWeldGun\WObj:=wobj0;
+                    MoveJ safeSt2_0, v1000, z50, tWeldGun\WObj:=wobj0;
                     MoveJ HomeST2_0,v1000,z50,tWeldGun\WObj:=wobj0;
                 ENDIF                
             ENDWHILE
@@ -443,9 +443,9 @@ MODULE A_15499_29_Railing_ST2_LS
         weldCorner 1, Odp{1},CorrPT{1},2;
        
         !Top Second Post weld up to (n1-1)th Post
-        FOR i FROM 2 TO n1-1 DO
-            weldCorner 2,Odp{i},CorrPT{i},1;
-        ENDFOR
+        !FOR i FROM 2 TO n1-1 DO
+            !weldCorner 2,Odp{i},CorrPT{i},1;
+        !ENDFOR
 
         !Top last Post weld
         weldCorner 3, Odp{n1},CorrPT{n1},2;
@@ -474,9 +474,9 @@ MODULE A_15499_29_Railing_ST2_LS
         weldCorner 7,Odp{1},CorrPB{1},3;
 
         !Bottom Second Post weld up to (n1-1)th Post
-        FOR i FROM 2 TO n1-1 DO
-            weldCorner 5,Odp{i},CorrPB{i},3;
-        ENDFOR
+        !FOR i FROM 2 TO n1-1 DO
+            !weldCorner 5,Odp{i},CorrPB{i},3;
+        !ENDFOR
 
         !Top last Post weld
         weldCorner 6, Odp{n1},CorrPB{n1},4;
@@ -517,12 +517,12 @@ MODULE A_15499_29_Railing_ST2_LS
         Weld_2G_H WobjN,OdP{1},CorrPT{1},"RT",t1;
 
         !Top Second Post weld up to (n1-1)th Post
-        FOR i FROM 2 TO n1-1 DO
-            WobjN:=wobjST2;
-            WobjN.oframe.trans.y:= WobjN.oframe.trans.y+h-2*t1;
-            WobjN.oframe.trans:= WobjN.oframe.trans+CorrPT{i};
-            Weld_2G_H WobjN,OdP{i},CorrPT{i},"MT",t1;
-        ENDFOR
+        !FOR i FROM 2 TO n1-1 DO
+            !WobjN:=wobjST2;
+            !WobjN.oframe.trans.y:= WobjN.oframe.trans.y+h-2*t1;
+            !WobjN.oframe.trans:= WobjN.oframe.trans+CorrPT{i};
+            !Weld_2G_H WobjN,OdP{i},CorrPT{i},"MT",t1;
+        !ENDFOR
 
         !Top last Post weld
         WobjN:=wobjST2;
@@ -554,17 +554,17 @@ MODULE A_15499_29_Railing_ST2_LS
         Weld_2G_v WobjN,OdP{1},CorrPT{1},"LB",t1;
         
         !Bottom Second Post weld up to (n1-1)th Post
-        FOR i FROM 2 TO n1-1 DO
-            WobjN:=wobjST2;
-            WobjN.oframe.trans:= WobjN.oframe.trans+CorrPB{i};
-            Weld_2G_v WobjN,OdP{i},CorrPB{i},"RB",t1;
-            Weld_2G_v WobjN,OdP{i},CorrPB{i},"LB",t1;
-        ENDFOR
+        !FOR i FROM 2 TO n1-1 DO
+            !WobjN:=wobjST2;
+            !WobjN.oframe.trans:= WobjN.oframe.trans+CorrPB{i};
+            !Weld_2G_v WobjN,OdP{i},CorrPB{i},"RB",t1;
+            !Weld_2G_v WobjN,OdP{i},CorrPB{i},"LB",t1;
+        !ENDFOR
 
         !Bottom last Post weld
         WobjN:=wobjST2;
         WobjN.oframe.trans:= WobjN.oframe.trans+CorrPB{n1};
-        Weld_2G_H WobjN,OdP{n1},CorrPB{n1},"LB",t1;
+        Weld_2G_H WobjN,OdP{1},CorrPT{1},"LB",t1;
 
         MoveJ Offs(overST2,0,h/2,0), v1000, z50, tWeldGun\WObj:=wRot2;            
 
@@ -691,78 +691,12 @@ MODULE A_15499_29_Railing_ST2_LS
         ENDIF
         !!
     ENDPROC
-    
-    !This procedure move robot to safeST2 and let operator to clean
-    LOCAL PROC Cleaning()
-        
-        MoveJ HomeST2_0, v1000, z50, tWeldGun\WObj:=wobj0;
-        s:=0;
-        TPWrite     "*******Now you can clean weldings*******";
-        TPReadFK s, "***press Finish when you complete ***",
-            "Finish",
-            "",
-            "",
-            "",
-            "";       
-        IF s = 1 THEN
-        ENDIF
-    ENDPROC
-    
-    !This procedure let operator to UnloadTurn, rotate and load again the railing on station
-    LOCAL PROC UnloadTurn(bool UnloadTurn)
-
-        IF UnloadTurn THEN
-        MoveJ HomeST2_0,v1000,z50,tWeldGun\WObj:=wobj0;
-        s:=0;
-        TPReadFK s, "!!!Take care, Station is turning to UnloadTurn Railing?!!!",
-            "Ok",
-            "",
-            "",
-            "",
-            "";       
-        ELSE
-        MoveJ HomeST2_0,v1000,z50,tWeldGun\WObj:=wobj0;
-        s:=0;
-        
-        TPReadFK s, "!!!!!!!!Now you can turn Railig!!!!!!",
-            "Ok",
-            "",
-            "",
-            "",
-            ""; 
-        MoveJ HomeST2_0,v1000,z50,tWeldGun\WObj:=wobj0;
-        TPReadFK s, "!!!!!!!Are you ready to weld?!!!!!!!",
-            "Ok",
-            "",
-            "",
-            "",
-            ""; 
-        ENDIF
-    ENDPROC
 
     !This procedure search all Top connections and store correct positions on position array
     LOCAL PROC PosSearchTop()
         
-        MoveJ safeST2_0, v1000, z50, tWeldGun;            
-        GunClean;
-        IF RobAtStation() = 1 THEN
-            StartStn1;
-        ELSE
-            StartStn2;
-        ENDIF
+        SearchPrepare;
         
-        MoveJ Offs(overST2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;            
-        PulseDO\High\PLength:=0.5,soFeedFwd_1;
-        
-         s:=0;
-        TPErase;
-        TPReadFK s, "Check wire lengh (20mm)",
-            "Ok",
-            "",
-            "",
-            "",
-            "";   
-
         SetWobjUse wobjST2 ,0,0,0;
         
         !store the correctposition of top Posts
@@ -784,25 +718,7 @@ MODULE A_15499_29_Railing_ST2_LS
     !This procedure search all Bottom connections and store correct positions on position array
     LOCAL PROC PosSearchBottom()
         
-        MoveJ safeST2_0, v1000, z50, tWeldGun;            
-        GunClean;
-        IF RobAtStation() = 1 THEN
-            StartStn1;
-        ELSE
-            StartStn2;
-        ENDIF
-
-        MoveJ Offs(overST2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;            
-        PulseDO\High\PLength:=0.5,soFeedFwd_1;
-        
-         s:=0;
-        TPErase;
-        TPReadFK s, "Check wire lengh (20mm)",
-            "Ok",
-            "",
-            "",
-            "",
-            "";   
+        SearchPrepare;
 
         SetWobjUse wobjST2 ,0,0,0;
 
@@ -818,7 +734,6 @@ MODULE A_15499_29_Railing_ST2_LS
         ENDFOR
         
         MoveJ Offs(overST2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;
-        !MoveJ Offs(overST2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;        
         
     ENDPROC
     
@@ -862,8 +777,8 @@ MODULE A_15499_29_Railing_ST2_LS
             Movej Offs(RT0,50,-30,30), v1000, fine, tWeldGun\WObj:=wobjUse;
             Search_1D RTSy ,Offs(RT0,0,-30,30) , Offs(RT0,0,0,30), v200, tWeldGun\WObj:=wobjUse;
             Search_1D RTSz ,Offs(RT0,0,-30,30) , Offs(RT0,0,-30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
-            Movel Offs(RT0,0,-30,30),v1000,z50,tWeldGun\WObj:=wobjUse;
-            MoveJ Offs(RT0,200,0,0), v1000, fine, tWeldGun\WObj:=wobjUse;
+            Movel Offs(RT0,0,-30,30), v600, z50, tWeldGun\WObj:=wobjUse;
+            MoveJ Offs(RT0,200,0,0), v600, fine, tWeldGun\WObj:=wobjUse;
             
             !Calculate deviations
             myX:=0;
@@ -958,11 +873,11 @@ MODULE A_15499_29_Railing_ST2_LS
             MoveJ Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
             !Move to a suitable point to start Y and Z correction
-            Movel Offs(RT0,(w-t3)/2+50,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse;
-            Movel Offs(RT0,(w-t3)/2,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
-            Search_1D RTSy ,Offs(RT0,(w-t3)/2,-20,10) , Offs(RT0,(w-t3)/2,0,10), v200, tWeldGun\WObj:=wobjUse;
-            Movel Offs(RT0,(w-t3)/2-5,-20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
-            Search_1D RTSz ,Offs(RT0,0,-20,15) , Offs(RT0,0,-20,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,(w-t3)/2+50,-20,20),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Movel Offs(RT0,(w-t3)/2,-20,20),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSy ,Offs(RT0,(w-t3)/2,-20,20) , Offs(RT0,(w-t3)/2,0,20), v200, tWeldGun\WObj:=wobjUse;
+            Movel Offs(RT0,(w-t3)/2-5,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSz ,Offs(RT0,0,-20,10) , Offs(RT0,0,-20,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
             Movel Offs(RT0,100,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
             
             !Calculate deviations
@@ -972,9 +887,9 @@ MODULE A_15499_29_Railing_ST2_LS
 
             !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
-            Movel Offs(RT0,50,-20,9),v1000,z50,tWeldGun\WObj:=wobjUse; 
-            Search_1D RTSx ,Offs(RT0,(w-t3)/2-15,-20,2) , Offs(RT0,-15,-20,2), v200, tWeldGun\WObj:=wobjUse;  
-            Movel Offs(RT0,50,-20,5),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Movel Offs(RT0,50,-25,3),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx ,Offs(RT0,(w-t3)/2-15,-25,3) , Offs(RT0,-15,-25,3), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,-25,3),v1000,z50,tWeldGun\WObj:=wobjUse; 
             PDispOff;
             myX:=RTSx.trans.x;
             
@@ -983,11 +898,11 @@ MODULE A_15499_29_Railing_ST2_LS
             MoveJ Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
             
             !Move to a suitable point to start Y and Z correction
-            Movel Offs(RT0,(w-t3)/2+50,20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
-            Search_1D RTSy ,Offs(RT0,(w-t3)/2-5,20,15) , Offs(RT0,(w-t3)/2-5,0,15), v200, tWeldGun\WObj:=wobjUse;
-            Movel Offs(RT0,(w-t3)/2-5,20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
-            Search_1D RTSz ,Offs(RT0,0,20,15) , Offs(RT0,0,20,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
-            Movel Offs(RT0,30,20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Movel Offs(RT0,(w-t3)/2+50,20,20),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSy ,Offs(RT0,(w-t3)/2-5,20,20) , Offs(RT0,(w-t3)/2-5,0,20), v200, tWeldGun\WObj:=wobjUse;
+            Movel Offs(RT0,(w-t3)/2-5,20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSz ,Offs(RT0,0,20,10) , Offs(RT0,0,20,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,30,20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
             
             !Calculate deviations
             myX:=0;
@@ -996,9 +911,9 @@ MODULE A_15499_29_Railing_ST2_LS
             
             !Move to a suitable point to start X correction
             PDispSet [[myX,myY,myZ] , [1,0,0,0]];
-            Movel Offs(RT0,50,20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
-            Search_1D RTSx ,Offs(RT0,(w-t3)/2-15,20,3) , Offs(RT0,-15,20,3), v200, tWeldGun\WObj:=wobjUse;  
-            Movel Offs(RT0,50,20,9),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Movel Offs(RT0,50,25,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx ,Offs(RT0,(w-t3)/2-15,25,3) , Offs(RT0,-15,25,3), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,25,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
             PDispOff;
             myX:=RTSx.trans.x;
 

@@ -75,16 +75,16 @@ MODULE A0_General
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3227.45,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
-    LOCAL PERS robtarget RT1 := [[0,2,0],[0.93,0.19,-0.19,0.25],[1,-1,-1,0],[762.075,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3G_E
-    LOCAL PERS robtarget RT2 := [[-1,-2,3],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[1999.8,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
-    LOCAL PERS robtarget Rt3 := [[-1,-2,-3],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[1989.8,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
-    LOCAL PERS robtarget RT4 := [[-1,-2,-2],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[3974.54,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
-    LOCAL PERS robtarget RT5 := [[-1,3,3],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[1999.8,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
-    LOCAL PERS robtarget RT6 := [[-1,2,-3],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[3227.45,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
+    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[1987.38,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT1 := [[0,2,0],[0.93,0.19,-0.19,0.25],[1,-1,-1,0],[765.342,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3G_E
+    LOCAL PERS robtarget RT2 := [[0,0,0],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[2735.38,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
+    LOCAL PERS robtarget Rt3 := [[0,0,0],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[1987.38,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
+    LOCAL PERS robtarget RT4 := [[-1,-2,-2],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[2735.38,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
+    LOCAL PERS robtarget RT5 := [[0,0,0],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[765.342,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
+    LOCAL PERS robtarget RT6 := [[0,0,0],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[1987.38,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
 
-    LOCAL PERS robtarget RB1 := [[0,2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[3641.43,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
-    LOCAL PERS robtarget RB2 := [[0,0,-6],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[3139.34,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
+    LOCAL PERS robtarget RB1 := [[0,2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[2400.32,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
+    LOCAL PERS robtarget RB2 := [[0,-2,-6],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[1901.69,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
     
     !**************************************************************************************************************    
     !************************************************Robot DATA*****************************************************    
@@ -321,6 +321,58 @@ MODULE A0_General
         ENDIF
 
     ENDPROC
+
+    !This procedure let operator to UnloadTurn, rotate and load again the railing on station
+    PROC UnloadTurn(bool UnloadTurn)
+
+        IF UnloadTurn THEN
+            IF RobAtStation() = 1 THEN
+                MoveJ HomeST1_0,v1000,z50,tWeldGun\WObj:=wobj0;
+                s:=0;
+                TPReadFK s, "!!!!!!!Are you ready to weld?!!!!!!!",
+                    "Ok",
+                    "",
+                    "",
+                    "",
+                    ""; 
+            ELSE
+                MoveJ HomeST2_0,v1000,z50,tWeldGun\WObj:=wobj0;
+                s:=0;
+                TPReadFK s, "!!!!!!!Are you ready to weld?!!!!!!!",
+                    "Ok",
+                    "",
+                    "",
+                    "",
+                    ""; 
+            ENDIF
+        ENDIF
+    ENDPROC
+    
+    !This procedure move robot to safeST2 and let operator to clean
+    PROC Cleaning()
+        
+        IF RobAtStation() = 1 THEN
+            MoveJ HomeST1_0, v1000, z50, tWeldGun\WObj:=wobj0;
+            s:=0;
+            TPWrite     "*******Now you can clean weldings*******";
+            TPReadFK s, "***press Finish when you complete ***",
+                "Finish",
+                "",
+                "",
+                "",
+                "";       
+        ELSE
+            MoveJ HomeST2_0, v1000, z50, tWeldGun\WObj:=wobj0;
+            s:=0;
+            TPWrite     "*******Now you can clean weldings*******";
+            TPReadFK s, "***press Finish when you complete ***",
+                "Finish",
+                "",
+                "",
+                "",
+                "";       
+        ENDIF
+    ENDPROC    
     
     !This procedure move robot to safeSt2 then HomeSt1
     PROC EndOfWork()
@@ -341,6 +393,47 @@ MODULE A0_General
 
     ENDPROC
 
+    !This procedure Prepare Torch for searching parts
+    PROC SearchPrepare()
+        
+        IF RobAtStation() = 1 THEN
+            MoveJ safeST1_0, v1000, z50, tWeldGun;            
+            
+            GunClean;
+            StartStn1;
+    
+            MoveJ Offs(overST1,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+            PulseDO\High\PLength:=0.5,soFeedFwd_1;
+            
+            s:=0;
+            TPErase;
+            TPReadFK s, "Check wire lengh (20mm)",
+                "Ok",
+                "",
+                "",
+                "",
+                "";           
+        ELSE
+            MoveJ safeST2_0, v1000, z50, tWeldGun;            
+            
+            GunClean;
+            StartStn2;
+    
+            MoveJ Offs(overST2,0,0,0), v1000, z50, tWeldGun\WObj:=wRot2;            
+            PulseDO\High\PLength:=0.5,soFeedFwd_1;
+            
+            s:=0;
+            TPErase;
+            TPReadFK s, "Check wire lengh (20mm)",
+                "Ok",
+                "",
+                "",
+                "",
+                "";           
+        ENDIF
+    ENDPROC    
+
+    
     PROC BackHome()
         
         IF siSTN1_ACT=1 THEN
@@ -551,7 +644,7 @@ MODULE A0_General
         
         !RT2:= [[0,0,0],[0.449513,-0.755714,-0.467429,0.0913496],[0,-2,1,1],[1864.98,9E+09,9E+09,9E+09,29.9993,9E+09]] ;
 
-        RT2.trans:=[-1,-2,3];
+        RT2.trans:=[0,0,0];
         RT2.rot:=[0.45,-0.76,-0.47,0.09];
         RT2.robconf:=[0,-2,1,1];
 
@@ -672,7 +765,7 @@ MODULE A0_General
         WobjUse:=CorrectWobj;
 
         
-        RT3.trans:=[-1,-2,-3];
+        RT3.trans:=[0,0,0];
         RT3.rot:=[0.76,-0.45,-0.09,0.47];
         RT3.robconf:=[1,-1,-1,0];
 
@@ -870,7 +963,8 @@ MODULE A0_General
 
         !RT5:= [[-2.83,3.59,0.11],[0.330995,0.88275,0.0400167,-0.331049],[0,-1,1,0],[1865.01,9E+09,9E+09,9E+09,0.000329907,9E+09]] ;
 
-        RT5.trans:=[-1,3,3];
+        !RT5.trans:=[-1,3,3];
+        RT5.trans:=[0,0,0];
         RT5.rot:=[0.45,0.76,-0.47,-0.09];
         RT5.robconf:=[1,-1,1,0];
 
@@ -989,7 +1083,7 @@ MODULE A0_General
         
         !RT6:= [[-2.60,13.00,-13.30],[0.86,0.27,-0.40,0.12],[0,0,-2,0],[1750.01,9E+09,9E+09,9E+09,29.9989,9E+09]] ;
 
-        RT6.trans:=[-1,2,-3];
+        RT6.trans:=[0,0,0];
         RT6.rot:=[0.76,0.45,-0.09,-0.47];
         RT6.robconf:=[0,0,-2,0];
 
@@ -1135,7 +1229,7 @@ MODULE A0_General
         
         p0:=Offs(RB1,0,0,0);
         p2:=offs(p0,-(1.9),0,-(3));
-        p3:=offs(p0,-(7),0,-(7));
+        p3:=offs(p0,-(7.5),0,-(7.5));
 
         !Over weld position
         MoveJ Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1143,8 +1237,8 @@ MODULE A0_General
         !Welding
         ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
         ArcCEnd p2, p3, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        !ArcLStart offs(p3,1,1,0), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        !ArcLEnd offs(p3,0,1,0), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p3,2,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p3,0,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
         MoveL Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1152,7 +1246,7 @@ MODULE A0_General
         RB1.rot:=[0.54,-0.75,-0.28,0.21];
         p0:=Offs(RB1,0,0,0);
         p1:=Offs(p0,-(1.9),0,(3));
-        p4:=Offs(p0,-(7),0,(7));
+        p4:=Offs(p0,-(7.5),0,(7.5));
 
         !Over weld position
         MoveJ Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1160,8 +1254,8 @@ MODULE A0_General
         !Welding
         ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
         ArcCEnd p1, p4, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        !ArcLStart offs(p4,2,1,0), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        !ArcLEnd offs(p4,0,1,0), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p4,2,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p4,0,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
         MoveL Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1187,7 +1281,7 @@ MODULE A0_General
         
         !RB2:= [[150.21,-84.72,-8.20],[0.790415,0.341463,-0.47661,0.177455],[0,0,-3,0],[816.442,9E+09,9E+09,9E+09,29.9979,9E+09]] ;
 
-        RB2.trans:=[0,0,-6];
+        RB2.trans:=[0,-2,-6];
 
         IF wobjUse.oframe.trans.y<0 THEN
             RB2.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
@@ -1202,14 +1296,14 @@ MODULE A0_General
         !Over weld position
         p0:=Offs(RB2,0,0,0); !correct position of wire end, aimed to (baluster's center-1)
         p1:=Offs(p0,-(1.9),0,(3));
-        p4:=Offs(p0,-(7),0,(7));
+        p4:=Offs(p0,-(7.5),0,(7.5));
         MoveJ Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
         !Welding
         ArcLStart p0, v4000, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
         ArcCEnd p1, p4, v4000, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p4,1,-1,0), v4000, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p4,0,-1,0), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p4,1,0,0), v4000, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p4,0,0,0), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
        
         MoveL Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
@@ -1223,14 +1317,14 @@ MODULE A0_General
         !p0:=Offs(RB2,18,-2,-(t3/2-1)+8);
         p0:=Offs(RB2,0,0,0);
         p2:=offs(p0,-(1.9),0,-(3));
-        p3:=offs(p0,-(7),0,-(7));
+        p3:=offs(p0,-(7.5),0,-(7.5));
         Movej Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding
         ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
         ArcCEnd p2, p3, v4000, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p3,2,-1,0), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p3,0,-1,0), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p3,1,0,0), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p3,0,0,0), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
         
         MoveL Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
