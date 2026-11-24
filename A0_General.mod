@@ -75,7 +75,7 @@ MODULE A0_General
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[1987.38,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT0 := [[0,0,0],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[1986.22,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
     LOCAL PERS robtarget RT1 := [[0,2,0],[0.93,0.19,-0.19,0.25],[1,-1,-1,0],[765.342,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3G_E
     LOCAL PERS robtarget RT2 := [[0,0,0],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[2735.38,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
     LOCAL PERS robtarget Rt3 := [[0,0,0],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[1987.38,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
@@ -83,8 +83,8 @@ MODULE A0_General
     LOCAL PERS robtarget RT5 := [[0,0,0],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[765.342,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
     LOCAL PERS robtarget RT6 := [[0,0,0],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[1987.38,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
 
-    LOCAL PERS robtarget RB1 := [[0,2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[2400.32,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
-    LOCAL PERS robtarget RB2 := [[0,-2,-6],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[1901.69,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
+    LOCAL PERS robtarget RB1 := [[0,2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[2400.42,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
+    LOCAL PERS robtarget RB2 := [[0,-2,-6],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[1905.56,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
     
     !**************************************************************************************************************    
     !************************************************Robot DATA*****************************************************    
@@ -142,7 +142,7 @@ MODULE A0_General
             StartStn1;
             
             !Take robot out of home and put it on safe place side of station 2
-            MoveJ safeSt1 ,v1000,fine,tWeldGun\WObj:=wobj0;            
+            MoveJ safeSt1_0 ,v1000,fine,tWeldGun\WObj:=wobj0;            
 
             !Set work object to the center point of fixture on Station2 X=0 Y=0 Z=0
             MoveJ safeSt1_0 ,v1000,fine,tWeldGun\WObj:=wobj0;
@@ -226,7 +226,7 @@ MODULE A0_General
             
             MoveJ beginSt1, v500, fine, tWeldGun\WObj:=wRot1;
             WaitTime 5;
-            MoveJ safeSt1, v500, fine, tWeldGun\WObj:=wobj0;
+            MoveJ safeSt1_0, v500, fine, tWeldGun\WObj:=wobj0;
             
         ELSEIF stationNumber = 2 THEN
             
@@ -374,7 +374,7 @@ MODULE A0_General
         ENDIF
     ENDPROC    
     
-    !This procedure move robot to safeSt2 then HomeSt1
+    !This procedure move robot to safeSt2 then HomeSt1_0
     PROC EndOfWork()
         
         s:=0;
@@ -437,12 +437,12 @@ MODULE A0_General
     PROC BackHome()
         
         IF siSTN1_ACT=1 THEN
-            MoveJ safeSt1,v1000,z50,tWeldGun\WObj:=wobj0;
-            MoveJ HomeSt1,v1000,z50,tWeldGun\WObj:=wobj0;
+            MoveJ safeSt1_0,v1000,z50,tWeldGun\WObj:=wobj0;
+            MoveJ HomeSt1_0,v1000,z50,tWeldGun\WObj:=wobj0;
             DeactAll;
         ELSEIF siSTN2_ACT=1 THEN
-            MoveJ safeSt2,v1000,z50,tWeldGun\WObj:=wobj0;
-            MoveJ HomeSt2,v1000,z50,tWeldGun\WObj:=wobj0;
+            MoveJ safeSt2_0,v1000,z50,tWeldGun\WObj:=wobj0;
+            MoveJ HomeSt2_0,v1000,z50,tWeldGun\WObj:=wobj0;
             DeactAll;
         ENDIF
 
@@ -1345,8 +1345,8 @@ MODULE A0_General
         
         StartStn2;
         
-        MoveJ HomeSt2,v1000,z50,tWeldGun\WObj:=wobj0;
-        MoveJ safeSt2,v1000,z50,tWeldGun\WObj:=wobj0;
+        MoveJ HomeSt2_0,v1000,z50,tWeldGun\WObj:=wobj0;
+        MoveJ safeSt2_0,v1000,z50,tWeldGun\WObj:=wobj0;
     
         MoveJ Offs(RT0,500,0,1800),v1000,z50,tWeldGun\WObj:=wRot2;
         Movel Offs(RT0,500-119,0,1800),v1000,z50,tWeldGun\WObj:=wRot2;

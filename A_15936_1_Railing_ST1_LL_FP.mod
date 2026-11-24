@@ -41,7 +41,7 @@ MODULE A_15936_1_Railing_ST1_LL_FP
     LOCAL PERS num d1:=85;
     
     !Flatbars thicknes (Top rail, Bottom rail, Posts)
-    LOCAL PERS num t1:=9.5;
+    LOCAL PERS num t1:=10;
 
     !Angle profil thicknes
     LOCAL PERS num t2:=4;
@@ -55,10 +55,10 @@ MODULE A_15936_1_Railing_ST1_LL_FP
     LOCAL PERS num OdP{5}:=[0,1139,2277,2797,0];
     
     !Corrected top position of Railing posts (abreviated as CorrPT)
-    LOCAL PERS pos CorrPT{5}:=[[0,0,0],[7.53427,-0.0638866,0.259058],[3.49118,0.732592,-10.9057],[3.07881,5.16339,-12.4104],[0,0,0]];
+    LOCAL PERS pos CorrPT{5}:=[[6.36823,0.480066,-0.229234],[5.64505,0.966026,1.54676],[3.21837,3.2754,-10.4434],[3.07881,5.16339,-12.4104],[0,0,0]];
     
     !Corrected Bottom position of Railing posts (abreviated as CorrPB)
-    LOCAL PERS pos CorrPB{5}:=[[0.607755,1.63046,0.729983],[2.68107,1.94725,0.0606209],[1.61013,3.86471,-9.80465],[2.26688,5.31524,-11.6393],[0,0,0]];
+    LOCAL PERS pos CorrPB{5}:=[[-0.743195,2.42593,0.591664],[1.85586,2.58757,2.1979],[1.87321,4.28522,-9.42786],[2.26688,5.31524,-11.6393],[0,0,0]];
     
     !Ordinate Dimensions of Balusters (abreviated as odB)
     !Put origin on right side of railing then dimention for first internal edge after that all right side of railing's post to the end
@@ -70,11 +70,11 @@ MODULE A_15936_1_Railing_ST1_LL_FP
                         ,0,0,0,0,0,0,0,0,0,0];
 
     !Corrected top position of Balusters (abreviated as CorrBT)
-    LOCAL PERS pos CorrBT{50}:=[[5.7947,-0.806783,1.69829],[6.83687,-0.806607,2.35023],[8.25515,-0.641082,3.39612],[7.70522,-0.639513,2.51068],[8.58035,-0.642571,4.13973]
-                        ,[8.67364,-0.559231,3.15054],[7.22795,-0.479122,1.86253],[7.16537,-0.23958,6.87376],[6.33467,-0.1608,0.0785596],[7.53042,0.244987,-1.04534]
-                        ,[6.25067,0.0797864,0.884368],[7.70032,0.0814589,1.28826],[6.48355,0.0803418,-1.12887],[8.10507,0.485713,0.410026],[5.61129,0.405571,-1.12619]
-                        ,[5.20687,0.552916,-3.05036],[8.02702,0.634634,-3.53106],[4.73913,0.790501,-1.67687],[8.27559,0.870734,-3.2131],[4.57,0.952835,-2.40796]
-                        ,[5.7777,0.79256,-3.93441],[4.48092,0.629785,-4.24951],[3.4219,2.8857,-4.49991],[4.81152,2.9644,-2.87657],[3.82228,3.13229,-5.06386]
+    LOCAL PERS pos CorrBT{50}:=[[0.797583,0.420796,6.44364],[3.28812,0.25799,6.59327],[5.36216,0.581331,6.19756],[5.44575,0.580497,4.18787],[4.32903,1.29805,6.9989]
+                        ,[1.43922,1.37804,4.98065],[6.08714,0.97502,4.25357],[6.57183,1.05705,2.37826],[7.69427,1.05784,3.76264],[1.89703,0.97874,1.87849]
+                        ,[4.23349,0.817468,3.34286],[4.06303,1.29447,1.3942],[0.691141,1.53806,0.659222],[6.75924,2.24918,-0.713302],[4.95175,2.25317,0.422123]
+                        ,[5.06344,2.41038,-2.09249],[1.16156,2.09138,-1.03658],[1.00326,2.25119,-4.28417],[3.90773,2.0114,-1.35446],[2.94941,2.25273,-3.39453]
+                        ,[1.72533,2.40863,-3.71292],[3.90603,2.1721,-1.27688],[3.4219,2.8857,-4.49991],[4.81152,2.9644,-2.87657],[3.82228,3.13229,-5.06386]
                         ,[2.93309,3.70357,-3.50951],[3.34137,4.58844,-6.69346],[5.4669,1.43364,3.45882],[5.3099,1.59056,1.8309],[5.94501,1.9971,3.30134]
                         ,[5.31953,2.47833,1.83822],[5.31912,2.31523,0.964815],[4.81954,2.79875,2.32699],[4.08431,3.12391,4.01431],[2.87021,3.44494,0.24322]
                         ,[2.62342,3.76688,1.60985],[3.20142,4.33449,1.22477],[2.38715,4.08813,-0.474715],[1.9045,4.25613,-0.635951],[0,0,0]
@@ -82,11 +82,11 @@ MODULE A_15936_1_Railing_ST1_LL_FP
                         ,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
 
     !Corrected bottom position of Balusters (abreviated as CorrBB)
-    LOCAL PERS pos CorrBB{50}:=[[2.88461,1.45906,6.37489],[3.8498,1.37466,6.54333],[1.69317,1.37034,5.42607],[1.61557,1.45414,3.42979],[1.85207,1.61716,6.22476]
-                        ,[5.69669,1.7795,5.61105],[2.25744,2.02656,3.89112],[1.20035,2.02524,0.844559],[1.12211,2.02468,4.53698],[4.33549,1.94216,2.57441]
-                        ,[1.93252,1.94104,2.4953],[1.91683,2.5052,1.25487],[4.75494,3.0573,1.83283],[3.1091,3.3751,-0.836913],[2.1531,3.53554,0.464791]
-                        ,[1.27574,2.50987,-0.805793],[6.71381,2.97706,-0.415934],[4.25953,2.81853,-1.9005],[0.791157,2.81612,-1.13837],[2.79456,3.13447,-2.98629]
-                        ,[3.11459,3.45145,-2.60138],[2.56204,3.69515,-2.11467],[0.46979,4.51038,-2.54503],[0.874672,4.74946,-3.48337],[1.60374,4.99146,-1.15636]
+    LOCAL PERS pos CorrBB{50}:=[[-2.4431,1.85451,4.10619],[0.227046,2.24883,4.77319],[-2.36062,2.18369,5.3684],[-1.46255,2.26206,4.79536],[-0.902892,2.41794,4.71263]
+                        ,[-0.585649,2.57727,5.03549],[-0.829094,2.73711,3.56575],[0.537616,2.8127,9.24611],[-0.652163,3.13676,2.66374],[-0.177093,3.06074,1.74929]
+                        ,[0.380792,2.97688,3.24731],[-0.496454,3.05506,3.95132],[0.384761,3.0594,0.984457],[-0.0220118,3.53943,1.12398],[1.91943,3.78003,1.1835]
+                        ,[1.351,4.02625,-1.25434],[-2.13628,4.10455,-1.00114],[1.18758,4.10235,0.815153],[-1.07362,3.7021,-0.872863],[3.30828,4.10361,-1.65866]
+                        ,[0.196774,4.3443,-4.62315],[-0.545119,4.42353,-3.82955],[0.46979,4.51038,-2.54503],[0.874672,4.74946,-3.48337],[1.60374,4.99146,-1.15636]
                         ,[-0.332249,5.39732,0.481232],[0.554457,5.64238,-1.41539],[5.52111,3.71404,2.48351],[4.50443,3.79408,2.31905],[4.01673,3.79647,1.83546]
                         ,[6.10427,4.03495,4.98647],[3.85355,4.35447,5.52419],[4.00761,4.51836,3.4753],[3.2794,4.59647,2.85192],[1.68054,4.75211,0.507195]
                         ,[0.645722,5.15469,2.11031],[-0.146597,5.39963,2.01753],[-1.28728,5.64924,1.84352],[-2.91112,5.56307,1.61965],[0,0,0]
@@ -95,7 +95,7 @@ MODULE A_15936_1_Railing_ST1_LL_FP
                         
     LOCAL PERS num wobjA:=45; !Angle of table
 
-    LOCAL PERS num partCounter:=5; !counter
+    LOCAL PERS num partCounter:=8; !counter
     
     !**************************************************************************************************************    
     !**********************************************local variables*************************************************    
@@ -131,7 +131,7 @@ MODULE A_15936_1_Railing_ST1_LL_FP
     
     LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3763,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT0 := [[0,0,-1],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3762.5,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
     LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[1306.45,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
     LOCAL PERS robtarget RT2 := [[0,0,0],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3356.99,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
     LOCAL PERS robtarget Rt3 := [[0,0,0],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4621.83,9E+09,9E+09,9E+09,40,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
@@ -366,7 +366,7 @@ MODULE A_15936_1_Railing_ST1_LL_FP
         StartStn1;
         
         IF firstRailing THEN
-            MoveJ HomeSt1_Load,v1000,z50,tWeldGun\WObj:=wobj0;
+            MoveJ HomeSt1_0,v1000,z50,tWeldGun\WObj:=wobj0;
             TPErase;
             TPWrite"!!!!You can load new parts for railing!!!!!";
             TPReadFK s, "!!!!!!!!press ok when ready to strat!!!!!!!",
@@ -377,7 +377,7 @@ MODULE A_15936_1_Railing_ST1_LL_FP
                 "";             
             DataEntry;
         ELSE
-            MoveJ HomeSt1_Load,v1000,z50,tWeldGun\WObj:=wobj0;
+            MoveJ HomeSt1_0,v1000,z50,tWeldGun\WObj:=wobj0;
             TPErase;
             TPWrite"!!!!You can load new parts for railing!!!!!";
             TPReadFK s, "!!!!!!!!press ok when ready to strat!!!!!!!",
@@ -410,7 +410,7 @@ MODULE A_15936_1_Railing_ST1_LL_FP
                     "",
                     "";       
                 IF s=1 THEN
-                    MoveJ HomeSt1,v1000,z50,tWeldGun\WObj:=wobj0;
+                    MoveJ HomeSt1_0,v1000,z50,tWeldGun\WObj:=wobj0;
                     TPErase;
                     TPWrite     "!!!!You can load new parts for railing!!!!!";
                     TPReadFK s, "!!!!!!!!press ok when ready to strat!!!!!!!",
@@ -421,7 +421,7 @@ MODULE A_15936_1_Railing_ST1_LL_FP
                         "";      
                 ELSE
                     MoveJ safeSt1,v1000,z50,tWeldGun\WObj:=wobj0;
-                    MoveJ HomeSt1,v1000,z50,tWeldGun\WObj:=wobj0;
+                    MoveJ HomeSt1_0,v1000,z50,tWeldGun\WObj:=wobj0;
                 ENDIF                
             ENDWHILE
     ENDPROC
@@ -484,7 +484,10 @@ MODULE A_15936_1_Railing_ST1_LL_FP
         ENDFOR
 
         SetDO doExhaustStn1,0;
-    
+        
+        !Move to other side
+        MoveJ safeSt1_0, v1000, z50, tWeldGun;   
+        
         Cleaning;
         StartStn1;
     
@@ -553,7 +556,6 @@ MODULE A_15936_1_Railing_ST1_LL_FP
 
         !Move to other side
         MoveJ safeSt1_0, v1000, z50, tWeldGun;    
-    
         
         SetDO doExhaustStn1,0;
     
@@ -670,55 +672,6 @@ MODULE A_15936_1_Railing_ST1_LL_FP
         !!
     ENDPROC
     
-    !This procedure move robot to safeSt1 and let operator to clean
-    LOCAL PROC Cleaning()
-        
-        MoveJ safeSt1_0, v1000, z50, tWeldGun\WObj:=wobj0;
-        MoveJ HomeSt1_Load ,v1000,fine,tWeldGun\WObj:=wobj0;  
-        s:=0;
-        TPWrite     "*******Now you can clean weldings*******";
-        TPReadFK s, "***press Finish when you complete ***",
-            "Finish",
-            "",
-            "",
-            "",
-            "";       
-        IF s = 1 THEN
-        ENDIF
-    ENDPROC
-    
-    !This procedure let operator to UnloadTurn, rotate and load again the railing on station
-    LOCAL PROC UnloadTurn(bool UnloadTurn)
-
-        IF UnloadTurn THEN
-        MoveJ HomeSt1,v1000,z50,tWeldGun\WObj:=wobj0;
-        s:=0;
-        TPReadFK s, "!!!Take care, Station is turning to UnloadTurn Railing?!!!",
-            "Ok",
-            "",
-            "",
-            "",
-            "";       
-        ELSE
-        MoveJ HomeSt1,v1000,z50,tWeldGun\WObj:=wobj0;
-        s:=0;
-        
-        TPReadFK s, "!!!!!!!!Now you can turn Railig!!!!!!",
-            "Ok",
-            "",
-            "",
-            "",
-            ""; 
-        MoveJ HomeSt1_0,v1000,z50,tWeldGun\WObj:=wobj0;
-        TPReadFK s, "!!!!!!!Are you ready to weld?!!!!!!!",
-            "Ok",
-            "",
-            "",
-            "",
-            ""; 
-        ENDIF
-    ENDPROC
-
     !This procedure search all Top connections and store correct positions on position array
     LOCAL PROC PosSearchTop()
         
@@ -731,10 +684,11 @@ MODULE A_15936_1_Railing_ST1_LL_FP
         ENDIF
         
         MoveJ Offs(overSt1,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+        PulseDO\High\PLength:=0.5,soFeedFwd_1;
         
          s:=0;
         TPErase;
-        TPReadFK s, "Check TCP (15mm)",
+        TPReadFK s, "Check wire lengh (20mm)",
             "Ok",
             "",
             "",
@@ -771,10 +725,11 @@ MODULE A_15936_1_Railing_ST1_LL_FP
         ENDIF
 
         MoveJ Offs(overSt1,0,0,0), v1000, z50, tWeldGun\WObj:=wRot1;            
+        PulseDO\High\PLength:=0.5,soFeedFwd_1;
         
          s:=0;
         TPErase;
-        TPReadFK s, "Check TCP (15mm)",
+        TPReadFK s, "Check wire lengh (20mm)",
             "Ok",
             "",
             "",
