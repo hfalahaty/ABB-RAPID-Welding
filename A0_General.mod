@@ -43,7 +43,7 @@ MODULE A0_General
     !**************************************************************************************************************   
     
     PERS robtarget HomeSt1 :=       [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[-2500,9E+09,9E+09,9E+09,-60,9E+09]];!wobj0
-    PERS robtarget HomeSt1_0 :=       [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[-2500,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
+    PERS robtarget HomeSt1_0 :=     [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[-2500,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
     PERS robtarget HomeSt1_Load :=  [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[-2500,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
     PERS robtarget safeSt1 :=       [[10500,0,1200],[0,0,1,0],[-1,0,0,0],[2000,9E+09,9E+09,9E+09,-60,9E+09]];!wobj0
     PERS robtarget safeSt1_0 :=     [[10500,0,1200],[0,0,1,0],[-1,0,0,0],[2000,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
@@ -51,7 +51,7 @@ MODULE A0_General
     PERS robtarget  overSt1 :=      [[500,0,2000],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[2000,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
 
     PERS robtarget HomeSt2 :=       [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[5000,9E+09,9E+09,9E+09,-60,9E+09]];!wobj0
-    PERS robtarget HomeSt2_0 :=       [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[5000,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
+    PERS robtarget HomeSt2_0 :=     [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[5000,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
     PERS robtarget HomeSt2_Load :=  [[6000,0,1200],[0,0,-1,0],[0,-1,0,0],[5000,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
     PERS robtarget safeSt2 :=       [[3000,0,1200],[0,0,1,0],[-1,0,0,0],[1800,9E+09,9E+09,9E+09,-60,9E+09]];!wobj0
     PERS robtarget safeSt2_0 :=     [[3000,0,1200],[0,0,1,0],[-1,0,0,0],[1800,9E+09,9E+09,9E+09,0,9E+09]];!wobj0
@@ -73,43 +73,43 @@ MODULE A0_General
     !Reference Robtarget shows Down, inside part of frame (Abreviated as RefT page 25 of <<Sotware analysis handbook>> )
     LOCAL PERS robtarget RefT:= [[75,-465,810],[0.5,-0.5,-0.5,0.5],[1,-2,1,0],[370,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT:= [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
+    LOCAL PERS robtarget RT:=   [[0,0,0],[0.5,-0.5,-0.5,0.5],[0,0,-1,0],[950,9E+09,9E+09,9E+09,0,9E+09]];!wRot1
     
-    LOCAL PERS robtarget RT0 := [[0,0,0],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[1986.22,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
-    LOCAL PERS robtarget RT1 := [[0,2,0],[0.93,0.19,-0.19,0.25],[1,-1,-1,0],[765.342,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3G_E
-    LOCAL PERS robtarget RT2 := [[0,0,0],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[2735.38,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
-    LOCAL PERS robtarget Rt3 := [[0,0,0],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[1987.38,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
-    LOCAL PERS robtarget RT4 := [[-1,-2,-2],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[2735.38,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
-    LOCAL PERS robtarget RT5 := [[0,0,0],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[765.342,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
-    LOCAL PERS robtarget RT6 := [[0,0,0],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[1987.38,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
+    LOCAL PERS robtarget RT0 := [[0,0,0],[0.5,-0.5,-0.5,0.5],[1,-1,0,0],[3556.42,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for search positions and Weld_2G_H and Weld_2G_V
+    LOCAL PERS robtarget RT1 := [[0,-2,0],[0.93,-0.19,-0.25,0.19],[1,-1,-1,0],[2366.25,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_E
+    LOCAL PERS robtarget RT2 := [[0,0,0],[0.45,-0.76,-0.47,0.09],[0,-2,1,1],[3468.18,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for Weld_3F_SW and Weld_3F_SW_L
+    LOCAL PERS robtarget Rt3 := [[0,0,0],[0.76,-0.45,-0.09,0.47],[1,-1,-1,0],[4052.81,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for Weld_3F_SE and Weld_3F_SE_L
+    LOCAL PERS robtarget RT4 := [[0,-2,0],[0.3,-0.6,-0.73,0.13],[0,-2,1,1],[4312.81,9E+09,9E+09,9E+09,0,9E+09]];!wobjUse\ using for Weld_3G_W
+    LOCAL PERS robtarget RT5 := [[0,0,0],[0.45,0.76,-0.47,-0.09],[1,-1,1,0],[2718.47,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NW and Weld_3F_NW_L
+    LOCAL PERS robtarget RT6 := [[0,0,0],[0.76,0.45,-0.09,-0.47],[0,0,-2,0],[3558.26,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for Weld_3F_NE and Weld_3F_NE_L
 
-    LOCAL PERS robtarget RB1 := [[0,2,-6],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[2400.42,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
-    LOCAL PERS robtarget RB2 := [[0,-2,-6],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[1905.56,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
+    LOCAL PERS robtarget RB1 := [[0,2,-5],[0.54,-0.75,-0.28,0.21],[1,-1,-1,0],[3971.53,9E+09,9E+09,9E+09,-30,9E+09]];!wobjUse\ using for  Weld_ARC_N
+    LOCAL PERS robtarget RB2 := [[0,0,-7],[0.79,0.34,-0.47,0.18],[0,-1,-2,0],[3474.02,9E+09,9E+09,9E+09,30,9E+09]];!wobjUse\ using for  Weld_ARC_S
     
     !**************************************************************************************************************    
     !************************************************Robot DATA*****************************************************    
     !**************************************************************************************************************    
-    TASK PERS welddata weld_2F2G:=[5,5,[7,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
-    TASK PERS welddata weld_2F2G_a2:=[10,10,[9,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
-    TASK PERS welddata weld_2F2G_a3:=[7,6,[8,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
-    TASK PERS welddata weld_2F2G_a6:=[6,6,[1,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
-    TASK PERS welddata weld_2F2G_a4:=[7,9,[7,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
-    TASK PERS welddata weld_2F2G_a8:=[4,4,[1,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]]; 
-    TASK PERS welddata weld_3F:=[11,10,[2,0,0,0,0,0,0,0,0],[2,0,0,0,0,0,0,0,0]];
-    TASK PERS welddata weld_4F:=[7,9,[7,0,0,0,0,0,0,0,0],[10,0,0,0,0,0,0,0,0]];
-    TASK PERS welddata weld_3G:=[12,10,[7,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_2F2G:=      [5,5,[7,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_2F2G_a2:=   [10,10,[9,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_2F2G_a3:=   [7,6,[8,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_2F2G_a6:=   [6,6,[1,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_2F2G_a4:=   [7,9,[7,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_2F2G_a8:=   [4,4,[1,0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0,0]]; 
+    TASK PERS welddata weld_3F:=        [7,9,[7,0,0,0,0,0,0,0,0],[10,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_Baluster:=  [12,11,[11,0,0,0,0,11,0,0,0],[11,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_Baluster_f:=[14,10,[11,0,0,0,0,11,0,0,0],[11,0,0,0,0,0,0,0,0]];
+    TASK PERS welddata weld_3G:=        [12,10,[7,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0]];
     
-    TASK PERS weavedata weave2G2F:=[3,3,3,8,1,0.2,0,0.4,0,0,0,0,0,0,0];
-    TASK PERS weavedata weavePG3F_O:=[1,1,2,4,-1,0.2,0,0.2,0,0,0,0,0,0,0];
-    TASK PERS weavedata weavePG3F:=[1,1,2,5.5,0,0.1,0,0.1,0,0,0,0,0,0,0];
-    TASK PERS weavedata weave2F_a5:=[2,2,2,6,0,0.1,0,0.1,0,0,0,0,0,0,0];
-    TASK PERS weavedata weave2F_East:=[2,1,3,6,0,0.15,0,0.05,0,0,-45,0,0,0,0];
-    TASK PERS weavedata weave3F:=[1,1,4,4,3,0.2,0,0.2,0,0,0,0,0,0,0];
-    TASK PERS weavedata weave2F_West:=[2,1,3,6,0,0.05,0,0.15,0,0,45,0,0,0,0];
+    TASK PERS weavedata weave2G2F:=     [3,3,3,8,1,0.2,0,0.4,0,0,0,0,0,0,0];
+    TASK PERS weavedata weavePG3F_O:=   [1,1,2,4,-1,0.2,0,0.2,0,0,0,0,0,0,0];
+    TASK PERS weavedata weavePG3F:=     [1,1,2,5.5,0,0.1,0,0.1,0,0,0,0,0,0,0];
+    TASK PERS weavedata weave2F_a5:=    [2,2,2,6,0,0.1,0,0.1,0,0,0,0,0,0,0];
+    TASK PERS weavedata weave2F_East:=  [2,1,3,6,0,0.15,0,0.05,0,0,-45,0,0,0,0];
+    TASK PERS weavedata weave3F:=       [1,1,4,4,3,0.2,0,0.2,0,0,0,0,0,0,0];
+    TASK PERS weavedata weave2F_West:=  [2,1,3,6,0,0.05,0,0.15,0,0,45,0,0,0,0];
     
-    TASK PERS seamdata smUse:=[1,0.4,[2,0,0,0,0,0,0,0,0],0,0,0,0,0,[2,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0.4];
-    TASK PERS welddata weld_4F_1:=[12,11,[11,0,0,0,0,11,0,0,0],[11,0,0,0,0,0,0,0,0]];
-    TASK PERS weavedata weave2G2F_a4:=[1,1,2,4,0,0.1,0,0.1,0,0,0,0,0,0,0];
+    TASK PERS seamdata smUse:=          [1,0.4,[2,0,0,0,0,0,0,0,0],0,0,0,0,0,[2,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0.4];
+    TASK PERS weavedata weave2G2F_a4:=  [1,1,2,4,0,0.1,0,0.1,0,0,0,0,0,0,0];
     
     !**************************************************************************************************************    
     !*************************************************Local Variables********************************************** 
@@ -125,6 +125,9 @@ MODULE A0_General
     LOCAL VAR num PosAn;
     
     LOCAL VAR wobjdata Cwobj; 
+    
+    !LOCAL PERS wobjdata STwobj :=[FALSE,FALSE,"STN2",[[0,0,0],[1,0,0,0]],[[63,-567.5,764],[1,0,0,0]]];
+
     LOCAL VAR pos myPos;
     
     !**************************************************************************************************************    
@@ -326,7 +329,7 @@ MODULE A0_General
     PROC UnloadTurn(bool UnloadTurn)
 
         IF UnloadTurn THEN
-            IF RobAtStation() = 1 THEN
+            IF siSTN1_ACT=1 THEN
                 MoveJ HomeST1_0,v1000,z50,tWeldGun\WObj:=wobj0;
                 s:=0;
                 TPReadFK s, "!!!!!!!Are you ready to weld?!!!!!!!",
@@ -351,7 +354,7 @@ MODULE A0_General
     !This procedure move robot to safeST2 and let operator to clean
     PROC Cleaning()
         
-        IF RobAtStation() = 1 THEN
+        IF siSTN1_ACT=1 THEN
             MoveJ HomeST1_0, v1000, z50, tWeldGun\WObj:=wobj0;
             s:=0;
             TPWrite     "*******Now you can clean weldings*******";
@@ -396,7 +399,7 @@ MODULE A0_General
     !This procedure Prepare Torch for searching parts
     PROC SearchPrepare()
         
-        IF RobAtStation() = 1 THEN
+        IF siSTN1_ACT=1 THEN
             MoveJ safeST1_0, v1000, z50, tWeldGun;            
             
             GunClean;
@@ -433,6 +436,255 @@ MODULE A0_General
         ENDIF
     ENDPROC    
 
+    !This Function used to make new workObject by using coorected point coordinations comes from PosCorr function
+    !It has two Entries
+    !myPosition = coorected point coordinations comes from PosCorr function
+    !SP = Search Position ( refer to page 24 of sotware analysis handbook )
+    !Syntax to use: WobjN:= WobjCorr (wobjSt1, dis,sp, h,w,t1,t2,t3);
+    FUNC wobjdata WobjCorr( wobjdata STwobj, num myPosition , num sp, num h, num w, num t1, num t2, num t3, num t4)
+        
+        VAR wobjdata Cwobj; 
+        VAR pose myPose; 
+
+        WobjUse:=STwobj;
+
+        IF SP=1 THEN !For SP refer to page 24 of sotware analysis handbook
+            
+            !correct the workObject to corrected points and move safely out of search teritory
+            wobjUse.oframe.trans.x:=STwobj.oframe.trans.x;
+            wobjUse.oframe.trans.y:=STwobj.oframe.trans.y+(h-2*t1);
+            wobjUse.oframe.trans.z:=STwobj.oframe.trans.z+myPosition;
+            
+        ELSEIF SP=2 THEN !For SP refer to page 24 of sotware analysis handbook
+        
+            !correct the workObject to corrected points and move safely out of search teritory
+            wobjUse.oframe.trans.x:=STwobj.oframe.trans.x;
+            wobjUse.oframe.trans.y:=STwobj.oframe.trans.y+(h-2*t1);
+            wobjUse.oframe.trans.z:=STwobj.oframe.trans.z+myPosition-t1;
+            
+        ELSEIF SP=3 THEN !For SP refer to page 24 of sotware analysis handbook
+            
+            !correct the workObject to corrected points and move safely out of search teritory
+            wobjUse.oframe.trans.x:=STwobj.oframe.trans.x;
+            wobjUse.oframe.trans.y:=STwobj.oframe.trans.y;
+            wobjUse.oframe.trans.z:=STwobj.oframe.trans.z+myPosition;
+            
+        ELSEIF SP=4 THEN !For SP refer to page 24 of sotware analysis handbook
+            
+            !correct the workObject to corrected points and move safely out of search teritory
+            wobjUse.oframe.trans.x:=STwobj.oframe.trans.x;
+            wobjUse.oframe.trans.y:=STwobj.oframe.trans.y;
+            wobjUse.oframe.trans.z:=STwobj.oframe.trans.z+myPosition-t1;
+        
+        ELSEIF SP=5 THEN !For SP refer to page 24 of sotware analysis handbook
+
+            !correct the workObject to corrected points and move safely out of search teritory
+            wobjUse.oframe.trans.x:=STwobj.oframe.trans.x-(w-t4)/2;
+            wobjUse.oframe.trans.y:=STwobj.oframe.trans.y+(h-2*t1);
+            wobjUse.oframe.trans.z:=STwobj.oframe.trans.z+myPosition-t1+t3;            
+        ELSEIF SP=6 THEN !For SP refer to page 24 of sotware analysis handbook
+
+            !correct the workObject to corrected points and move safely out of search teritory
+            wobjUse.oframe.trans.x:=STwobj.oframe.trans.x-(w-t4)/2;
+            wobjUse.oframe.trans.y:=STwobj.oframe.trans.y;
+            wobjUse.oframe.trans.z:=STwobj.oframe.trans.z+myPosition-t1+t3;
+        ENDIF
+        
+        Cwobj:=wobjUse;
+
+        RETURN Cwobj;
+        
+    ENDFUNC         
+    
+    !This Function used to make new Pos by using search_1D function (aplication manual AAB SMARTAC, page 81)
+    !It has three Entries
+    !dis=Ordinate dimensions
+    !SP=Search Position ( refer to page 24 of sotware analysis handbook )
+    !PosAn=Angle of rotating table
+    !Syntax to use:     Pos:=PosCorr(Odp{2} , 1,10);
+    FUNC pos PosCorr(wobjdata STwobj, num dis , num SP, num PosAn, num h, num w, num t1, num t2, num t3, num t4)
+       
+        VAR pose RTSx;
+        VAR pose RTSy;
+        VAR pose RTSz;
+        VAR num myX;
+        VAR num myY;
+        VAR num myZ;
+        
+        VAR wobjdata Cwobj; 
+        VAR wobjdata WobjN;
+        
+        VAR pos myPos; 
+
+        !Set workObject to designated point calculated based on parameters entered by user
+        WobjN:= WobjCorr (STwobj, dis,sp, h,w,t1,t2,t3,t4);
+        
+        IF wobjUse.oframe.trans.y<0 THEN
+            RT0.extax.eax_a:=wobjUse.oframe.trans.z;
+        ELSE
+            RT0.extax.eax_a:=wobjUse.oframe.trans.z+500;
+        ENDIF
+        
+        RT0.extax.eax_e:=0;
+        
+        !RT0.extax.eax_a:=wobjUse.oframe.trans.z+500;
+
+        IF SP=1 THEN !For SP refer to page 24 of sotware analysis handbook
+            
+            MoveJ Offs(RT0,200,0,0), v1000, fine, tWeldGun\WObj:=wobjUse;
+
+            !Move to a suitable point to start Y and Z correction
+            Movej Offs(RT0,50,-30,30), v1000, fine, tWeldGun\WObj:=wobjUse;
+            Search_1D RTSy ,Offs(RT0,0,-30,30) , Offs(RT0,0,0,30), v200, tWeldGun\WObj:=wobjUse;
+            Search_1D RTSz ,Offs(RT0,0,-30,30) , Offs(RT0,0,-30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,0,-30,30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            MoveJ Offs(RT0,200,0,0), v1000, fine, tWeldGun\WObj:=wobjUse;
+            
+            !Calculate deviations
+            myX:=0;
+            myY:=RTSz.trans.y;
+            myZ:=RTSz.trans.z;
+
+            !Move to a suitable point to start X correction
+            PDispSet [[myX,myY,myZ] , [1,0,0,0]];
+            Movel Offs(RT0,50,-5,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx ,Offs(RT0,5,-5,15) , Offs(RT0,-15,-5,15), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,-5,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            PDispOff;
+            myX:=RTSx.trans.x;
+
+            
+        ELSEIF SP=2 THEN !For SP refer to page 24 of sotware analysis handbook
+        
+            MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+
+            !Move to a suitable point to start Y and Z correction
+            Movej Offs(RT0,100,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSy ,Offs(RT0,0,-30,-30) , Offs(RT0,0,0,-30), v200, tWeldGun\WObj:=wobjUse;
+            Search_1D RTSz ,Offs(RT0,0,-30,-30) , Offs(RT0,0,-30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,0,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Movej Offs(RT0,200,-30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            
+            !Calculate deviations
+            myX:=0;
+            myY:=RTSy.trans.y;
+            myZ:=RTSz.trans.z;
+
+            !Move to a suitable point to start X correction
+            PDispSet [[myX,myY,myZ] , [1,0,0,0]];
+            Movel Offs(RT0,50,-5,-15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx ,Offs(RT0,5,-5,-15) , Offs(RT0,-15,-5,-15), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,-5,-15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            PDispOff;
+            myX:=RTSx.trans.x;
+            
+        ELSEIF SP=3 THEN !For SP refer to page 24 of sotware analysis handbook
+            
+            MoveJ Offs(RT0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+
+            !Move to a suitable point to start Y and Z correction
+            !Movej Offs(RT0,100,30,30),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSy ,Offs(RT0,0,30,30) , Offs(RT0,0,0,30), v200, tWeldGun\WObj:=wobjUse;
+            Search_1D RTSz ,Offs(RT0,0,30,30) , Offs(RT0,0,30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,0,30,30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Movej Offs(RT0,200,30,30),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            
+            !Calculate deviations
+            myX:=0;
+            myY:=RTSy.trans.y;
+            myZ:=RTSz.trans.z;
+
+            !Move to a suitable point to start X correction
+            PDispSet [[myX,myY,myZ] , [1,0,0,0]];
+            Movel Offs(RT0,50,5,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx, Offs(RT0,5,5,15) , Offs(RT0,-15,5,15), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,5,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            PDispOff;
+            myX:=RTSx.trans.x;
+
+            
+        ELSEIF SP=4 THEN !For SP refer to page 24 of sotware analysis handbook
+            
+            Movej Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+
+            !Move to a suitable point to start Y and Z correction
+            Movej Offs(RT0,100,30,-30),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSy ,Offs(RT0,0,30,-30) , Offs(RT0,0,0,-30), v200, tWeldGun\WObj:=wobjUse;
+            Search_1D RTSz ,Offs(RT0,0,30,-30) , Offs(RT0,0,30,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,0,30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Movej Offs(RT0,200,30,-30),v1000,z50,tWeldGun\WObj:=wobjUse;
+            
+            !Calculate deviations
+            myX:=0;
+            myY:=RTSy.trans.y;
+            myZ:=RTSz.trans.z;
+
+            !Move to a suitable point to start X correction
+            PDispSet [[myX,myY,myZ] , [1,0,0,0]];
+            Movel Offs(RT0,50,5,-15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx ,Offs(RT0,5,5,-15) , Offs(RT0,-15,5,-15), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,5,-15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            PDispOff;
+            myX:=RTSx.trans.x;
+
+        
+        ELSEIF SP=5 THEN !For SP refer to page 24 of sotware analysis handbook
+
+            MoveJ Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+
+            !Move to a suitable point to start Y and Z correction
+            Movel Offs(RT0,(w-t4)/2+50,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse;
+            Movel Offs(RT0,(w-t4)/2,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSy ,Offs(RT0,(w-t4)/2,-20,10) , Offs(RT0,(w-t4)/2,0,10), v200, tWeldGun\WObj:=wobjUse;
+            Movel Offs(RT0,(w-t4)/2-5,-20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSz ,Offs(RT0,0,-20,15) , Offs(RT0,0,-20,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,100,-20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            
+            !Calculate deviations
+            myX:=0;
+            myY:=RTSy.trans.y;
+            myZ:=RTSz.trans.z;
+
+            !Move to a suitable point to start X correction
+            PDispSet [[myX,myY,myZ] , [1,0,0,0]];
+            Movel Offs(RT0,50,-20,9),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx ,Offs(RT0,(w-t4)/2-15,-20,2) , Offs(RT0,-15,-20,2), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,-20,5),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            PDispOff;
+            myX:=RTSx.trans.x;
+            
+        ELSEIF SP=6 THEN !For SP refer to page 24 of sotware analysis handbook
+            
+            MoveJ Offs(RT0,100,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+            
+            !Move to a suitable point to start Y and Z correction
+            Movel Offs(RT0,(w-t4)/2+50,20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSy ,Offs(RT0,(w-t4)/2-5,20,15) , Offs(RT0,(w-t4)/2-5,0,15), v200, tWeldGun\WObj:=wobjUse;
+            Movel Offs(RT0,(w-t4)/2-5,20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSz ,Offs(RT0,0,20,15) , Offs(RT0,0,20,0), v200, tWeldGun\WObj:=wobjUse\PrePDisp:=RTSy;
+            Movel Offs(RT0,30,20,15),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            
+            !Calculate deviations
+            myX:=0;
+            myY:=RTSy.trans.y;
+            myZ:=RTSz.trans.z;
+            
+            !Move to a suitable point to start X correction
+            PDispSet [[myX,myY,myZ] , [1,0,0,0]];
+            Movel Offs(RT0,50,20,10),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            Search_1D RTSx ,Offs(RT0,(w-t4)/2-15,20,3) , Offs(RT0,-15,20,3), v200, tWeldGun\WObj:=wobjUse;  
+            Movel Offs(RT0,50,20,9),v1000,z50,tWeldGun\WObj:=wobjUse; 
+            PDispOff;
+            myX:=RTSx.trans.x;
+
+            
+        ENDIF
+        
+        myPos:=[myX,myY,myZ];
+        
+        RETURN myPos;
+        
+    ENDFUNC
     
     PROC BackHome()
         
@@ -516,7 +768,7 @@ MODULE A0_General
         WobjUse:=CorrectWobj;
         
         !Over weld position
-        RT0.trans:=[0,0,-1];
+        RT0.trans:=[0,0,0];
         RT0.rot:=[0.5,-0.5,-0.5,0.5];
         RT0.robconf:=[1,-1,0,0];
         IF wobjUse.oframe.trans.y<0 THEN
@@ -578,7 +830,7 @@ MODULE A0_General
             RT0.trans:=[0,60,0];
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
         ELSE
-            RT1.trans:=[0,-2,0];
+            RT1.trans:=[1,-2,0];
             RT1.rot:=[0.93,-0.19,-0.25,0.19];
             RT1.robconf:=[1,-1,-1,0];
             RT1.extax:=[wobjUse.oframe.trans.z+500,9E+09,9E+09,9E+09,0,9E+09];
@@ -622,7 +874,7 @@ MODULE A0_General
         PulseDO\High\PLength:=1.5,doFeedBwd_1;
         
         !Welding side (PG3F)
-        ArcLStart Offs(RT1,0,0,0), v100, smUse, weld_3G, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT1,1,0,0), v100, smUse, weld_3G, fine, tWeldGun\WObj:=wobjUse;
         ArcLEnd Offs(RT1,-width,0,0), v100, smUse, weld_3G, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
@@ -709,8 +961,8 @@ MODULE A0_General
             PulseDO\High\PLength:=1.5, doFeedBwd_1;
            
             !Welding side (PG3F)
-            ArcLStart Offs(RT2,0,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT2,-width,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+            ArcLStart Offs(RT2,1,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT2,-width,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
     
             !Over weld position
             Movel Offs(RT2,200,-9,9),v1000,z50,tWeldGun\WObj:=WobjUse;
@@ -729,7 +981,7 @@ MODULE A0_General
 
         WobjUse:=CorrectWobj;
 
-        RT2.trans:=[-1,0,0];
+        RT2.trans:=[1,0,0];
         RT2.rot:=[0.45,-0.76,-0.47,0.09];
         RT2.robconf:=[0,-2,1,1];
 
@@ -742,8 +994,8 @@ MODULE A0_General
         !Over weld position
         Movej Offs(RT2,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
        
-        ArcLStart Offs(RT2,0,0,2), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd Offs(RT2,-width+thickness,0,2), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT2,0,0,2), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd Offs(RT2,-width+thickness,0,2), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
         ArcLStart Offs(RT2,-width+thickness+2,0,0), v150, smUse, weld_2F2G_a4, fine, tWeldGun\WObj:=wobjUse;
         ArcLEnd Offs(RT2,-width+thickness+2,0,2), v150, smUse, weld_2F2G_a4, fine, tWeldGun\WObj:=wobjUse;
 
@@ -832,8 +1084,8 @@ MODULE A0_General
             PulseDO\High\PLength:=1.5,doFeedBwd_1;
             
             !Welding side (PG3F)
-            ArcLStart Offs(RT3,0,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT3,-width+1,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+            ArcLStart Offs(RT3,1,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT3,-width+1,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
             
             !Over weld position
             Movel Offs(RT3,200,-8,-8),v1000,z50,tWeldGun\WObj:=WobjUse;
@@ -852,7 +1104,7 @@ MODULE A0_General
 
         WobjUse:=CorrectWobj;
         
-        RT3.trans:=[-1,0,0];
+        RT3.trans:=[0,0,0];
         RT3.rot:=[0.76,-0.45,-0.09,0.47];
         RT3.robconf:=[1,-1,-1,0];
 
@@ -866,11 +1118,11 @@ MODULE A0_General
         Movej Offs(RT3,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding side (PG3F)
-        ArcLStart Offs(RT3,0,0,0), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd Offs(RT3,-width+thickness,0,0), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT3,0,0,0), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd Offs(RT3,-width+thickness,0,0), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
         !odp{1}-2 This -2 is for preventing from hit fixture
-        ArcLStart Offs(RT3,-width+thickness,0,-(0)), v150, smUse, weld_4F, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd Offs(RT3,-width+thickness,0,-4), v150, smUse, weld_4F, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT3,-width+thickness,0,-(0)), v150, smUse, weld_3F, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd Offs(RT3,-width+thickness,0,-4), v150, smUse, weld_3F, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
         Movel Offs(RT3,200,0,0),v1000,z50,tWeldGun\WObj:=WobjUse;
@@ -892,16 +1144,16 @@ MODULE A0_General
 
         !RT4:= [[-0.01,0.03,-0.04],[0.297766,-0.602984,-0.728606,0.129922],[1,-1,0,1],[5394.97,9E+09,9E+09,9E+09,0.00222879,9E+09]] ;
 
-        RT4.rot:=[0.30,-0.60,-0.73,0.13];
+        RT4.rot:=[0.19,0.93,0.25,-0.19];
         RT4.robconf:=[0,-2,1,1];
 
         IF wobjUse.oframe.trans.y<0 THEN
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,0,9E+09];
-            RT4.trans:=[-1,2,-2];
+            RT4.trans:=[0,2,0];
             RT4.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
         ELSE
             RT0.extax:=[wobjUse.oframe.trans.z+750,9E+09,9E+09,9E+09,0,9E+09];
-            RT4.trans:=[-1,-2,-2];
+            RT4.trans:=[0,-2,0];
             RT4.extax:=[wobjUse.oframe.trans.z+750,9E+09,9E+09,9E+09,0,9E+09];
         ENDIF
 
@@ -941,11 +1193,11 @@ MODULE A0_General
         PulseDO\High\PLength:=1.5,doFeedBwd_1;
         
         !Welding side (PG3F)
-        ArcLStart Offs(RT4,0,0,0), v100, smUse, weld_3G, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT4,1,0,0), v100, smUse, weld_3G, fine, tWeldGun\WObj:=wobjUse;
         ArcLEnd Offs(RT4,-width,0,0), v100, smUse, weld_3G, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
-        Movel Offs(RT4,200,0,0),v1000,z50,tWeldGun\WObj:=WobjUse;
+        Movel Offs(RT4,200,0,0), v500, z50, tWeldGun\WObj:=WobjUse;
 
         PDispOff;
         
@@ -1025,8 +1277,8 @@ MODULE A0_General
             PulseDO\High\PLength:=1.5,doFeedBwd_1;
             
             !Welding side (PG3F)
-            ArcLStart Offs(RT5,0,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
-            ArcLEnd Offs(RT5,-width-2,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+            ArcLStart Offs(RT5,1,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+            ArcLEnd Offs(RT5,-width-2,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
             
             !Over weld position
             Movel Offs(RT5,200,0,0),v1000,z50,tWeldGun\WObj:=WobjUse;
@@ -1045,7 +1297,7 @@ MODULE A0_General
 
         WobjUse:=CorrectWobj;
 
-        RT5.trans:=[-1,0,4];
+        RT5.trans:=[1,0,1];
         RT5.rot:=[0.45,0.76,-0.47,-0.09];
         RT5.robconf:=[1,-1,1,0];
 
@@ -1059,8 +1311,8 @@ MODULE A0_General
         MoveJ Offs(RT5,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding side (PG3F)
-        ArcLStart Offs(RT5,0,0,0), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd Offs(RT5,-width+thickness+2,0,0), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT5,0,0,0), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd Offs(RT5,-width+thickness+2,0,0), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
         ArcLStart Offs(RT5,-width+thickness,2,0-6), v150, smUse, weld_2F2G_a4, fine, tWeldGun\WObj:=wobjUse;
         ArcLEnd Offs(RT5,-width+thickness,2,2), v150, smUse, weld_2F2G_a4, fine, tWeldGun\WObj:=wobjUse;
 
@@ -1150,8 +1402,8 @@ MODULE A0_General
         PulseDO\High\PLength:=1.5,doFeedBwd_1;
         
         !Welding side (PG3F)
-        ArcLStart Offs(RT6,0,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd Offs(RT6,-width,0,0), v150, smUse, weld_4F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT6,1,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd Offs(RT6,-width,0,0), v150, smUse, weld_3F\Weave:=weave3F, fine, tWeldGun\WObj:=wobjUse;
         
         !Over weld position
         Movel Offs(RT6,200,13,-16),v1000,z50,tWeldGun\WObj:=WobjUse;
@@ -1170,7 +1422,7 @@ MODULE A0_General
 
         WobjUse:=CorrectWobj;
         
-        RT6.trans:=[-1,0,0];
+        RT6.trans:=[0,0,0];
         RT6.rot:=[0.76,0.45,-0.09,-0.47];
         RT6.robconf:=[0,0,-2,0];
 
@@ -1184,8 +1436,8 @@ MODULE A0_General
         MoveJ Offs(RT6,200,13,-16),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding side (PG3F)
-        ArcLStart Offs(RT6,0,2,-2), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd Offs(RT6,-width+thickness,2,-2), v150, smUse, weld_4F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart Offs(RT6,0,2,-2), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd Offs(RT6,-width+thickness,2,-2), v150, smUse, weld_3F\Weave:=weavePG3F_O, fine, tWeldGun\WObj:=wobjUse;
         ArcLStart Offs(RT6,-width+thickness+3,2,0), v150, smUse, weld_2F2G_a4, fine, tWeldGun\WObj:=wobjUse;
         ArcLEnd Offs(RT6,-width+thickness+3,2,-2), v150, smUse, weld_2F2G_a4, fine, tWeldGun\WObj:=wobjUse;
 
@@ -1214,7 +1466,7 @@ MODULE A0_General
 
         !RB1:= [[9.98,-18.10,-0.35],[0.75894,-0.546435,-0.21249,0.283314],[1,1,-2,1],[484.003,9E+09,9E+09,9E+09,0.000251827,9E+09]] ;
 
-        RB1.trans:=[0,2,-6];
+        RB1.trans:=[0,2,-5];
 
         IF wobjUse.oframe.trans.y<0 THEN
             RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
@@ -1235,13 +1487,13 @@ MODULE A0_General
         MoveJ Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding
-        ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcCEnd p2, p3, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p3,2,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p3,0,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart p0, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcCEnd p2, p3, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p3,3,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p3,0,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
-        MoveL Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+        MoveL Offs(p0,50,0,0),v100,z50,tWeldGun\WObj:=wobjUse;
 
         RB1.rot:=[0.54,-0.75,-0.28,0.21];
         p0:=Offs(RB1,0,0,0);
@@ -1252,10 +1504,10 @@ MODULE A0_General
         MoveJ Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding
-        ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcCEnd p1, p4, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p4,2,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p4,0,0,0), v150, smUse, weld_2F2G_a8, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart p0, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcCEnd p1, p4, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p4,3,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p4,0,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
 
         !Over weld position
         MoveL Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
@@ -1281,7 +1533,7 @@ MODULE A0_General
         
         !RB2:= [[150.21,-84.72,-8.20],[0.790415,0.341463,-0.47661,0.177455],[0,0,-3,0],[816.442,9E+09,9E+09,9E+09,29.9979,9E+09]] ;
 
-        RB2.trans:=[0,-2,-6];
+        RB2.trans:=[0,0,-7];
 
         IF wobjUse.oframe.trans.y<0 THEN
             RB2.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
@@ -1300,12 +1552,12 @@ MODULE A0_General
         MoveJ Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
         !Welding
-        ArcLStart p0, v4000, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcCEnd p1, p4, v4000, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p4,1,0,0), v4000, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p4,0,0,0), v150, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart p0, v4000, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcCEnd p1, p4, v4000, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p4,3,0,0), v4000, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p4,0,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
        
-        MoveL Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+        MoveL Offs(p0,50,0,0), v100, z50, tWeldGun\WObj:=wobjUse;
         
         RB2.rot:=[0.79,0.34,-0.47,0.18];
         RB2.robconf:=[0,-1,-2,0];
@@ -1321,10 +1573,10 @@ MODULE A0_General
         Movej Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
         
         !Welding
-        ArcLStart p0, v300, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcCEnd p2, p3, v4000, smUse, weld_4F_1, fine, tWeldGun\WObj:=wobjUse;
-        ArcLStart offs(p3,1,0,0), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
-        ArcLEnd offs(p3,0,0,0), v300, smUse, weld_2F2G_a6, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart p0, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcCEnd p2, p3, v4000, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p3,3,0,0), v300, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p3,0,0,0), v300, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
         
         MoveL Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
 
@@ -1332,8 +1584,75 @@ MODULE A0_General
 
     ENDPROC    
     
-    
-    
+    !( refer to page 25 of sotware analysis handbook )
+    PROC Weld_Bal_N(wobjdata CorrectWobj , num position ,pos correction, num PosAn)
+
+        VAR robtarget p0;
+        VAR robtarget p1;
+        VAR robtarget p2;
+        VAR robtarget p3;
+        VAR robtarget p4;
+        
+        PDispOff;
+        PosAn:=-30;
+        
+        WobjUse:=CorrectWobj;
+
+        !RB1:= [[9.98,-18.10,-0.35],[0.75894,-0.546435,-0.21249,0.283314],[1,1,-2,1],[484.003,9E+09,9E+09,9E+09,0.000251827,9E+09]] ;
+
+        RB1.trans:=[0,2,-5];
+
+        IF wobjUse.oframe.trans.y<0 THEN
+            RT0.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
+            RB1.extax:=[wobjUse.oframe.trans.z,9E+09,9E+09,9E+09,PosAn,9E+09];
+        ELSE
+            RT0.extax:=[wobjUse.oframe.trans.z+500,9E+09,9E+09,9E+09,PosAn,9E+09];
+            RB1.extax:=[wobjUse.oframe.trans.z+500,9E+09,9E+09,9E+09,PosAn,9E+09];
+        ENDIF
+
+        RB1.rot:=[0.75,-0.54,-0.21,0.28];
+        RB1.robconf:=[1,-1,-1,0];
+        
+        p0:=Offs(RB1,0,0,0);
+        p1:=Offs(RB1,0,0,0);
+        
+        p2:=offs(p0,-(1.9),0,-(3));
+        p3:=offs(p0,-(7.5),0,-(7.5));
+
+        !Over weld position
+        MoveJ Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+        
+        !Welding
+        ArcLStart p0, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcCEnd p2, p3, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p3,3,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p3,0,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+
+        !Over weld position
+        MoveL Offs(p0,50,0,0),v100,z50,tWeldGun\WObj:=wobjUse;
+
+        RB1.rot:=[0.54,-0.75,-0.28,0.21];
+        p0:=Offs(RB1,0,0,0);
+        p1:=Offs(p0,-(1.9),0,(3));
+        p4:=Offs(p0,-(7.5),0,(7.5));
+
+        !Over weld position
+        MoveJ Offs(p0,50,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+        
+        !Welding
+        ArcLStart p0, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcCEnd p1, p4, v300, smUse, weld_Baluster, fine, tWeldGun\WObj:=wobjUse;
+        ArcLStart offs(p4,3,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+        ArcLEnd offs(p4,0,0,0), v150, smUse, weld_Baluster_f, fine, tWeldGun\WObj:=wobjUse;
+
+        !Over weld position
+        MoveL Offs(p0,200,0,0),v1000,z50,tWeldGun\WObj:=wobjUse;
+        
+        !PDispOff;
+
+        
+    ENDPROC
+
     !This procedure set wire lengh 15mm out
     PROC Wire_Set()
             SetDO doFeedBwd_1,1;
